@@ -36,27 +36,27 @@
 <body>
 	<section class="header">
 		<header class="wrap inner-header cfl">
-	    <a href="#" class="logo">
-	    	<!-- <img src="lib/css/image/web-logo.png" /> -->
-	    	<svg class="icon-logo" viewBox="0 0 59 64">
+			<a href="#" class="logo">
+				<!-- <img src="lib/css/image/web-logo.png" /> -->
+				<svg class="icon-logo" viewBox="0 0 59 64">
 					<use xlink:href="lib/css/image/icons.svg#icon-logo"></use>
 				</svg>
-	    </a>
-	    <nav>
-	   		<ul class="nav" id="main-nav">
-	        <li><a href="#work">Work</a></li>
-	          <li><a href="#about">About</a></li>
-	          <li><a href="#contact">Contact</a></li>
-	      </ul>
-	  	</nav>
+			</a>
+			<nav>
+				<ul class="nav" id="main-nav">
+					<li><a href="#work">Work</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
-	  <span class="ribbon ribbon-cmyk"></span>
+		<span class="ribbon ribbon-cmyk"></span>
 	</section>
 	<section class="cyan-5" id="work">
 		<div class="wrap cfl">
-	  	<ul>
+			<ul>
 				<a href="portfolio.php?category=branding">
-	    		<li class="cyan-2">
+					<li class="cyan-2">
 						<figure>
 							<!-- <img src="lib/css/image/branding.png" /> -->
 							<svg class="icon icon-branding" viewBox="0 0 58 64">
@@ -66,13 +66,13 @@
 						<header>
 							<h1>Branding</h1>
 						</header>
-				   </li>
+					</li>
 				</a>
 				<a href="portfolio.php?category=web">
 					<li class="cyan-3">
-	         	<figure>
-	        		<!-- <img src="lib/css/image/web-design.png" /> -->
-	        		<svg class="icon icon-web icon-mobile" viewBox="0 0 35 64">
+						<figure>
+							<!-- <img src="lib/css/image/web-design.png" /> -->
+							<svg class="icon icon-web icon-mobile" viewBox="0 0 35 64">
 								<use xlink:href="lib/css/image/icons.svg#icon-mobile"></use>
 							</svg>
 							<svg class="icon icon-web icon-tablet" viewBox="0 0 48 64">
@@ -81,17 +81,17 @@
 							<svg class="icon icon-web icon-desktop" viewBox="0 0 77 64">
 								<use xlink:href="lib/css/image/icons.svg#icon-desktop"></use>
 							</svg>
-	         	</figure>
-	         	<header>
+						</figure>
+						<header>
 							<h1>Web Development</h1>
-	        	</header>
-	       	</li>
+						</header>
+					</li>
 				</a>
 				<a href="portfolio.php?category=print">
 					<li class="cyan-4">
-	     			<figure>
-	      			<!-- <img src="lib/css/image/print-design.png" /> -->
-	      			<svg class="icon icon-print" viewBox="0 0 99 64">
+						<figure>
+							<!-- <img src="lib/css/image/print-design.png" /> -->
+							<svg class="icon icon-print" viewBox="0 0 99 64">
 								<use xlink:href="lib/css/image/icons.svg#icon-card"></use>
 							</svg>
 							<svg class="icon icon-print" viewBox="0 0 55 64">
@@ -101,13 +101,13 @@
 								<use xlink:href="lib/css/image/icons.svg#icon-letter"></use>
 							</svg>
 						</figure>
-					  <header>
+						<header>
 							<h1>Print Marketing</h1>
-					  </header>
-		   		</li>
+						</header>
+					</li>
 				</a>
-	  	</ul>
-	  </div>
+			</ul>
+		</div>
 	</section>
 	<section id="about">
 		<div class="wrap about cfl">
