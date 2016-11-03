@@ -156,7 +156,7 @@
 	background: #24C2E4!important;
 	}
 	input.cyan-2{
-		box-shadow: 0 8px 0 #13A3BF;
+		box-shadow: 0 8px 0 #13A3BF, 0 16px 0 rgba(0,0,0, 0.05);
 	}
 	input.cyan-2:hover{
 		background: #24C2E4!important;

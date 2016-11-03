@@ -187,11 +187,11 @@ section{
 	}	
 	#contact input[type=submit]:hover{
 		top: 3px;
-		box-shadow: 0 5px 0 #13A3BF;
+		box-shadow: 0 5px 0 #13A3BF, 0 10px 0 rgba(0,0,0, 0.05);
 	}
 	#contact input[type=submit]:active{
 		top: 5px;
-		box-shadow: 0 3px 0 #13A3BF;
+		box-shadow: 0 3px 0 #13A3BF, 0 6px 0 rgba(0,0,0, 0.05);
 	}
 #contact{
 	/*background: #DADADA;
