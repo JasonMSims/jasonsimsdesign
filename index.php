@@ -5,10 +5,8 @@
 <title>Jason Sims Design</title>
 <meta name="description" content="Branding, Website and Print Design">
 <meta name="viewport" content="width=device-width, user-scalable=0" />
-<meta content="lib/css/image/favicon/favicon-192x192.png" itemprop="image">
-<!-- <link rel="icon" type="image/png" href="lib/css/image/favicon/favicon-192x192.png" sizes="192x192"> -->
+<link rel="icon" type="image/png" href="lib/css/image/favicon/favicon-192x192.png" sizes="192x192">
 <link rel="shortcut icon" href="lib/css/image/favicon/favicon.ico">
-<!-- <meta name="theme-color" content="#165B69"> -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Pathway+Gothic+One">
 <link rel="stylesheet" type="text/css" href="lib/css/main.css">
