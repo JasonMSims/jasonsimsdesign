@@ -36,6 +36,9 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Exclude .env
+.env
+
 # Exclude all old files
 *.old
 
