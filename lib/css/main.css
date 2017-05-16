@@ -360,16 +360,16 @@ footer{
 			opacity: 1;
 		}
 		#work li[class^='cyan'] header {
-			background-color: rgba(8, 54, 64, .5);
+			background-color: rgba(8, 54, 64, .75);
 		}
 		#work li[class^='magenta'] header {
-			background-color: rgba(63, 26, 48, .5);
+			background-color: rgba(63, 26, 48, .75);
 		}
 		#work li[class^='yellow'] header {
-			background-color: rgba(63, 51, 22, .5);
+			background-color: rgba(63, 51, 22, .75);
 		}
 		#work li[class^='black'] header {
-			background-color: rgba(0, 0, 0, .5);
+			background-color: rgba(0, 0, 0, .75);
 		}
 /*
 	#work li img{
