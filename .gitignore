@@ -50,3 +50,5 @@ config/
 sftp-config.json
 
 *.ai
+
+analyticstracking.php
