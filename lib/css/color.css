@@ -484,7 +484,9 @@ input.green-1:active {
 }
 .ribbon-cmyk {
   background: url('/lib/css/image/svg/ribbon-cmyk.svg');
+  background-size: 50rem;
 }
 .ribbon-rgb {
   background: url('/lib/css/image/svg/ribbon-rgb.svg');
+  background-size: 50rem;
 }
