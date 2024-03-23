@@ -21,8 +21,13 @@ ul, ol {
 }
 a, a img{
 	text-decoration: none;
-	color: inherit;
+	color: #13A3BF;
 	-webkit-transition: all .25s ease-in-out;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #116D80;
 }
 body{
 	background: #444;
@@ -142,12 +147,17 @@ section{
 	margin: 0 4% 0 5.85%;
 }
 #contact a{
+  color: inherit;
 	font-weight: 600;
 	font-size: 1.625em;
 	border-bottom: solid .05em #52C9EE;
 	}
-	.contact a:hover, .features a:active, .contact a:active {
-		color: #13A3BF;
+  #contact a:hover,
+  #contact a:focus,
+  #contact a:active,
+  .features a:active {
+    border-color: #116D80;
+		color: #116D80;
 	}
 #contact input[type=email], #contact input[type=text], #contact textarea{
 	border: .1em solid #EFEFEF;
@@ -276,8 +286,11 @@ footer{
 .nav{
 	float: right;
 	margin: 2em 0 0 0;
-	}
-	nav a:hover{
+  }
+  .nav a {
+    color: #8C8C8C;
+  }
+	.nav a:hover{
 		color: #EFEFEF;
 	}
 	.nav li{
@@ -467,7 +480,7 @@ svg.icon {
 		float: none;
 		width: 100%;
 		margin-bottom: 2em;
-	}
+  }
 	#ribbon{
 		background-size: 80% !important ;
 	}
@@ -553,3 +566,6 @@ svg.icon {
   	content:url(image/web-logo-rgb-HD.png)!important;
   }
 }*/
+.portfolio__content {
+	height: 100%;
+}
