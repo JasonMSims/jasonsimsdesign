@@ -111,7 +111,7 @@
 				<p>Several years ago, a lifelong passion for traditional drawing reinvented itself along a modern, technically proficient path. While I still make it a regular practice to take pencil to paper, I find myself as much at home with a mouse, a trackpad, or my always trusty Wacom pen in hand.</p>
 				<p>During my time as Lead Graphic Designer at One of A Kind Signs, I learned to manage quality and timeliness in a way that provides the client with a superb product and a quick turnaround.</p>
 				<p>I have had the privilege to work with organizations such as Crisis Rescue International, Better for Kids, Harbins Community Baptist Church, and 12Stone Church. I have enjoyed such fun and challenging endeavors as branding design & implementation, print marketing and interactive/responsive web development.</p>
-				<p>Most recently, I have designed and implemented websites for numerous financial institutions in my role as a website designer at <a href="https://www.ncr.com/banking">NCR</a>.</p>
+				<p>Most recently, I have designed and implemented websites for numerous financial institutions in my role as a website designer at <a target="_blank" href="https://www.ncr.com/banking">NCR</a>.</p>
 			</section>
 			<aside class="accolades">
 				<!-- <div>
@@ -141,7 +141,7 @@
 		<div class="wrap contact cfl">
 			<aside class="note">
 				<p>Feel free to drop me a line if you have any inquiries about a project, or if you just want to say hello.</p>
-				<h3><a href="mailto:jason@jasonsims.design">jason@jasonsims.design</a></h3>
+				<h3><a target="_blank" href="mailto:jason@jasonsims.design">jason@jasonsims.design</a></h3>
 			</aside>
 			<section class="contact-form">
 				<form id="contact-form" method="post" action="">
