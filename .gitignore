@@ -48,3 +48,5 @@ config/
 # Individual files to ignore
 /google*.html
 sftp-config.json
+
+*.ai
