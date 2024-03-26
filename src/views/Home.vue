@@ -1,6 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import HeroSection from '@/components/HeroSection.vue'
+import { AboutSection, HeroSection } from '@/components/'
 </script>
 <template>
   <HeroSection />
+  <AboutSection />
 </template>
+@/components/indextjs
