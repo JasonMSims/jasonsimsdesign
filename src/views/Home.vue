@@ -1,9 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
-<script setup lang="ts">
-import { AboutSection, HeroSection } from '@/components/'
-</script>
 <template>
-  <HeroSection />
-  <AboutSection />
+  <main class="mx-auto xl:container">
+    <HeroSection />
+    <AboutSection />
+    <ProjectsSection />
+  </main>
 </template>
-@/components/indextjs
+
+<script setup lang="ts">
+import { AboutSection, HeroSection, ProjectsSection } from '@/components/'
+</script>
