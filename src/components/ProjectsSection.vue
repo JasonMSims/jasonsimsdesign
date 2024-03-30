@@ -1,5 +1,8 @@
 <template>
-  <section :class="['mx-auto max-w-screen-2xl px-4 py-8 sm:py-16 xl:px-8', 'prose prose-sm prose-zinc prose-invert mb-8 max-w-none md:mb-16']">
+  <section
+    id="projects"
+    :class="['mx-auto max-w-screen-2xl px-4 py-8 sm:pb-16 sm:pt-32 xl:px-8', 'prose prose-sm prose-zinc prose-invert mb-8 max-w-none md:mb-16']"
+  >
     <h2 class="mb-8 mt-4 text-center text-4xl font-bold md:mb-12">Some of My Projects</h2>
 
     <TabGroup @change="handleFilterChange">
@@ -94,6 +97,16 @@ const projects = ref<Project[]>([
   },
   {
     id: 4,
+    category: 'Web',
+    client: 'Plethora7',
+    description: 'Sourcery CMS for Plethora7',
+    gitUrl: 'https://github.com/JasonMSims/sourcery-dashboard',
+    imgUrl: '/images/sourcery.webp',
+    previewUrl: 'https://sourcery.plethora7.com',
+    title: 'Sourcery',
+  },
+  {
+    id: 5,
     category: 'Brand',
     client: 'Plethora7',
     description: 'Brand Identity for Plethora7',
@@ -103,7 +116,7 @@ const projects = ref<Project[]>([
     title: 'Plethora7',
   },
   {
-    id: 5,
+    id: 6,
     category: 'Print',
     client: 'Nuvalsa',
     description: 'Packaging Design for Nuvalsa',
@@ -111,16 +124,6 @@ const projects = ref<Project[]>([
     imgUrl: '/images/nuvalsa.webp',
     previewUrl: 'https://nuvalsa.com',
     title: 'Nuvalsa',
-  },
-  {
-    id: 6,
-    category: 'Web',
-    client: 'Plethora7',
-    description: 'Sourcery CMS for Plethora7',
-    gitUrl: 'https://github.com/JasonMSims/sourcery-dashboard',
-    imgUrl: '/images/sourcery.webp',
-    previewUrl: 'https://sourcery.plethora7.com',
-    title: 'Sourcery',
   },
 ])
 
