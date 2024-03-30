@@ -1,5 +1,8 @@
 <template>
-  <section class="mx-auto flex max-w-screen-2xl flex-col items-start gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 xl:gap-16 xl:px-16">
+  <section
+    id="about"
+    class="mx-auto flex max-w-screen-2xl flex-col items-start gap-8 px-4 py-8 sm:pb-16 sm:pt-32 md:grid md:grid-cols-2 xl:gap-16 xl:px-16"
+  >
     <div class="relative">
       <img alt="" class="h-full w-full rounded-xl object-cover shadow-lg" src="/images/about-image.webp" />
       <div class="absolute inset-0 -z-10 bg-cyan-300/10 blur-3xl"></div>
