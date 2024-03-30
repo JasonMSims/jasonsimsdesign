@@ -21,7 +21,7 @@
       ]"
     >
       <div class="aspect-h-3 aspect-w-4 relative overflow-hidden rounded-t-xl">
-        <img :src="imgUrl" :alt="description" class="not-prose aspect-[16/9] object-cover object-left-top" />
+        <img :src="imgUrl" :alt="description" class="not-prose aspect-[4/3] object-cover object-left-top" />
         <div
           :class="[
             'absolute inset-0 flex h-full w-full items-center justify-center',
