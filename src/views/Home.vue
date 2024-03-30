@@ -4,9 +4,10 @@
     <HeroSection />
     <AboutSection />
     <ProjectsSection />
+    <ContactSection />
   </main>
 </template>
 
 <script setup lang="ts">
-import { AboutSection, HeroSection, ProjectsSection } from '@/components/'
+import { AboutSection, ContactSection, HeroSection, ProjectsSection } from '@/components/'
 </script>
