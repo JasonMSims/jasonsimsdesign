@@ -3,11 +3,11 @@
     <section id="contact" class="mx-auto grid max-w-7xl grid-cols-1 items-start gap-y-8 px-4 sm:px-12 md:grid-cols-2">
       <div class="md:py-20">
         <div class="prose-md prose prose-zinc prose-invert mx-auto lg:mx-0 lg:max-w-lg">
-          <div class="absolute inset-y-0 left-0 -z-10 w-full">
+          <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden">
             <div
               :class="[
                 'absolute h-full w-full blur-3xl',
-                //'[mask-image:radial-gradient(white_50%,transparent_95%)]',
+                '[mask-image:radial-gradient(white_50%,transparent_95%)]',
                 'left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-24',
               ]"
               aria-hidden="true"
