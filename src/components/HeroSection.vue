@@ -10,7 +10,7 @@
         <ButtonElement href="/#contact">Hire Me</ButtonElement>
       </div>
       <div class="mx-auto max-w-sm rounded-full bg-zinc-50/5 max-sm:-order-1 sm:col-span-4">
-        <img alt="Jason Sims" class="relative h-full w-full rounded-full" src="@/assets/images/geometric.svg?url" />
+        <img alt="Jason Sims" class="relative h-full w-full" src="@/assets/images/me.webp" />
       </div>
     </div>
   </section>
