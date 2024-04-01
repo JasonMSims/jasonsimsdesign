@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <main class="mx-auto xl:container">
+  <main class="pt-32">
     <HeroSection />
     <AboutSection />
     <ProjectsSection />

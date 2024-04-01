@@ -1,9 +1,6 @@
 <template>
-  <section
-    id="projects"
-    :class="['mx-auto max-w-screen-2xl px-4 py-8 sm:pb-16 sm:pt-32 xl:px-8', 'prose prose-sm prose-zinc prose-invert mb-8 max-w-none md:mb-16']"
-  >
-    <h2 class="mb-8 mt-4 text-center text-4xl font-bold md:mb-12">Some of My Projects</h2>
+  <section id="projects" :class="['mx-auto max-w-7xl px-4 py-8 sm:py-16 xl:px-8', 'prose prose-sm prose-zinc prose-invert']">
+    <h2 class="mb-8 mt-4 text-center text-4xl font-bold">Some of My Projects</h2>
 
     <TabGroup @change="handleFilterChange">
       <TabList class="not-prose flex flex-row items-center justify-center gap-2 px-6 py-6">
@@ -32,7 +29,6 @@
             leave-from-class="transform scale-100 opacity-100 z-40"
             leave-to-class="transform scale-95 opacity-0"
             move-class="transition duration-300 ease-out z-40"
-            @before-leave="beforeLeave"
           >
             <CardElement :key="project.id" v-for="project in filteredProjects" v-bind="project" />
           </TransitionGroup>
@@ -134,10 +130,4 @@ const filteredProjects = computed(() =>
 const categories = computed(() => {
   return new Set(['All', ...projects.value.map((project) => project.category)].sort((a, b) => a.localeCompare(b)))
 })
-
-const beforeLeave = (el: any) => {
-  const { width, height } = el.getBoundingClientRect()
-  el.style.width = `${width}px`
-  el.style.height = `${height}px`
-}
 </script>

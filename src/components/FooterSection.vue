@@ -1,8 +1,8 @@
 <template>
   <footer class="z-10 border-t border-t-zinc-200/5">
-    <div class="container mx-auto flex items-center justify-between p-12">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-8 sm:flex-row sm:justify-between sm:px-12">
       <span><JsdLogo class="h-16" /></span>
-      <p class="text-sm text-zinc-500">&copy; {{ new Date().getFullYear() }} Jason Sims Design. All rights reserved.</p>
+      <p class="text-center text-xs text-zinc-500 sm:text-sm">&copy; {{ new Date().getFullYear() }} Jason Sims Design. All rights reserved.</p>
     </div>
   </footer>
 </template>

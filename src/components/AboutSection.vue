@@ -1,10 +1,7 @@
 <template>
-  <section
-    id="about"
-    class="mx-auto flex max-w-screen-2xl flex-col items-start gap-8 px-4 py-8 sm:pb-16 sm:pt-32 md:grid md:grid-cols-2 xl:gap-16 xl:px-16"
-  >
-    <div class="relative">
-      <img alt="" class="h-full w-full rounded-xl object-cover shadow-lg" src="/images/about-image.webp" />
+  <section id="about" class="mx-auto grid max-w-7xl grid-cols-1 flex-col items-start gap-8 px-12 py-8 sm:grid-cols-2 sm:py-16 xl:gap-16 xl:px-12">
+    <div class="relative isolate">
+      <img alt="" class="mx-auto h-full w-full rounded-xl object-cover shadow-lg sm:w-full" src="/images/about-image.webp" />
       <div class="absolute inset-0 -z-10 bg-cyan-300/10 blur-3xl"></div>
     </div>
     <div class="prose-md prose prose-zinc prose-invert">
@@ -16,10 +13,11 @@
         anim id est laborum.
       </p>
       <TabGroup>
-        <TabList class="flex space-x-4">
+        <TabList class="flex gap-4">
           <Tab :key="titleIdx" as="template" v-for="({ title }, titleIdx) in categories" v-slot="{ selected }">
             <button
               :class="[
+                'text-left max-sm:grow max-sm:py-4',
                 'rounded-sm font-semibold transition-colors duration-200 hover:text-white',
                 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500',
                 { 'text-white': selected },
@@ -31,7 +29,7 @@
             </button>
           </Tab>
         </TabList>
-        <TabPanels class="prose prose-lg prose-zinc prose-invert">
+        <TabPanels>
           <TabPanel
             :class="['rounded-sm', 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500']"
             :key="categoryIdx"
