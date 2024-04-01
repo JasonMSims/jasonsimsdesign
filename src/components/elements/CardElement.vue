@@ -13,7 +13,7 @@
   >
     <div
       :class="[
-        'rounded-xl bg-zinc-950',
+        'flex grow flex-col rounded-xl bg-zinc-950',
         {
           'scale-[1.01] transition duration-150 ease-out group-focus-within/card:-translate-y-3 group-focus-within/card:translate-x-3 group-focus-within/card:shadow-lg group-hover/card:-translate-y-3 group-hover/card:translate-x-3 group-hover/card:shadow-lg':
             isCmyk,
