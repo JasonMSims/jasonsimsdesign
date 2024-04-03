@@ -6,7 +6,13 @@
           <span class="bg-gradient-to-r from-cyan-500 to-emerald-500 bg-clip-text text-transparent"> Hi, I'm </span>
           <span class="inline-flex flex-nowrap items-center">{{ name }}</span>
         </h1>
-        <p class="mb-6 text-sm text-zinc-300 sm:text-lg lg:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p class="mb-6 text-sm text-zinc-300 sm:text-lg lg:text-xl">
+          I'm a graphic designer
+          <span class="bg-gradient-to-r from-cyan-500 to-emerald-500 bg-clip-text text-lg font-bold text-transparent sm:text-xl lg:text-2xl"
+            >&amp;</span
+          >
+          full-stack web developer.
+        </p>
         <ButtonElement href="/#contact">Hire Me</ButtonElement>
       </div>
       <div class="mx-auto max-w-sm rounded-full bg-zinc-50/5 max-sm:-order-1 sm:col-span-4">
