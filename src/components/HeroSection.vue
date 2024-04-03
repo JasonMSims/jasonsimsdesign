@@ -13,7 +13,7 @@
           >
           full-stack web developer.
         </p>
-        <ButtonElement href="/#contact">Hire Me</ButtonElement>
+        <ButtonElement @click.prevent="scrollTo('#contact')" href="#contact">Hire Me</ButtonElement>
       </div>
       <div class="mx-auto max-w-sm rounded-full bg-zinc-50/5 max-sm:-order-1 sm:col-span-4">
         <img alt="Jason Sims" class="relative h-full w-full" src="@/assets/images/me.webp" />
@@ -25,6 +25,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { ButtonElement } from '@/components'
+import { UseScroll } from '@/composables/UseScroll'
+
+const { scrollTo } = UseScroll()
 
 const name = ref('Jason')
 </script>
