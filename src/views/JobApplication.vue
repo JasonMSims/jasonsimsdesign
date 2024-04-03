@@ -44,8 +44,9 @@
           for improvements and build out systems to make things more efficient.
         </p>
         <p>
-          One of the projects that I am the most proud of is our internal <a href="https://github.com/JasonMSims/FBA-Restock">Restock Tool</a>.
-          Unfortunately, I can't provide a live demo of this tool since it's locked down to our workspace. But here's a screenshot:
+          One of the projects that I am the most proud of is our internal
+          <a href="https://github.com/JasonMSims/FBA-Restock" target="_blank">Restock Tool</a>. Unfortunately, I can't provide a live demo of this
+          tool since it's locked down to our workspace. But here's a screenshot:
         </p>
         <img alt="FBA Restock Tool" class="not-prose relative h-auto w-full rounded-lg shadow" src="@/assets/images/fba-restock.webp" />
         <p>
@@ -56,6 +57,7 @@
         <p>
           Any personal projects I work on are open-source. I have contributed minor tweaks to large projects (<a
             href="https://github.com/vuejs/vitepress/pull/3692"
+            target="_blank"
             >like a typo in the Vitepress docs</a
           >
           &mdash; big contribution, I know).
@@ -91,7 +93,9 @@
         <h2>My Life</h2>
         <ul>
           <li>I have a beautiful wife and three wonderful children that I love spending time with and pouring into.</li>
-          <li>I'm one of the pastors at my local church (<a href="https://harbinschurch.org">Harbins Community Baptist Church</a>).</li>
+          <li>
+            I'm one of the pastors at my local church (<a href="https://harbinschurch.org" target="_blank">Harbins Community Baptist Church</a>).
+          </li>
           <li>I'm a huge Star Wars nerd.</li>
         </ul>
       </div>
