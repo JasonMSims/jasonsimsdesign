@@ -15,6 +15,11 @@
         <div class="max-w-xs max-lg:-order-1 sm:col-span-4">
           <img alt="Jason Sims" class="not-prose relative h-full w-full rounded-lg" src="@/assets/images/resume.webp" />
         </div>
+        <div class="mt-6 flex flex-row items-center gap-4">
+          <a v-for="social in socialMedia" :key="social.name" :href="social.url" target="_blank">
+            <component :is="social.logo" class="h-10 w-10 fill-zinc-100" :alt="social.name" />
+          </a>
+        </div>
         <div class="group">
           <h2
             :class="[
@@ -64,6 +69,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { TimelineElement } from '@/components'
+import GithubLogo from '@/assets/images/github.svg'
+import LinkedinLogo from '@/assets/images/linkedin.svg'
+
+const socialMedia = [
+  {
+    name: 'Github',
+    url: 'https://github.com/JasonMSims',
+    logo: GithubLogo,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/jasonsimsdesign/',
+    logo: LinkedinLogo,
+  },
+]
 
 type Course = {
   title: string
