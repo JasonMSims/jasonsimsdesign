@@ -7,7 +7,7 @@
       <img alt="" class="mx-auto h-full w-full rounded-xl object-cover shadow-lg sm:w-full" src="/images/about-image.webp" />
       <div class="absolute inset-0 -z-10 bg-cyan-300/10 blur-3xl"></div>
     </div>
-    <div class="prose-md prose prose-zinc prose-invert">
+    <div class="prose prose-zinc prose-invert">
       <h2>A Little Bit About Me</h2>
       <p>
         I started my career as a freelance graphic designer and quickly realized I needed a website. I've always wanted to build things myself and
