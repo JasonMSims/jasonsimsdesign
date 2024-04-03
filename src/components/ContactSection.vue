@@ -2,7 +2,7 @@
   <div class="relative isolate py-12">
     <section id="contact" class="mx-auto grid max-w-7xl scroll-m-28 grid-cols-1 items-start gap-y-8 px-4 sm:scroll-m-16 sm:px-12 md:grid-cols-2">
       <div class="md:py-20">
-        <div class="prose-md prose prose-zinc prose-invert mx-auto lg:mx-0 lg:max-w-lg">
+        <div class="prose prose-zinc prose-invert mx-auto lg:mx-0 lg:max-w-lg">
           <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden">
             <div
               :class="[
