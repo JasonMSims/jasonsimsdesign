@@ -5,6 +5,17 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
+    meta: {
+      hasNavbar: true,
+    },
+  },
+  {
+    path: '/resume',
+    name: 'Resume',
+    component: () => import('@/views/Resume.vue'),
+    meta: {
+      hasNavbar: false,
+    },
   },
 ]
 
