@@ -19,6 +19,7 @@
             <div class="flex space-x-4">
               <a
                 v-for="item in navigation"
+                @click.prevent="scrollToSection(item.href)"
                 :key="item.name"
                 :href="item.href"
                 :class="[
@@ -58,9 +59,16 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
 import Logo from '@/assets/images/logo.svg'
 
+const scrollToSection = (href: string) => {
+  const el = document.querySelector(href)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+
 const navigation = ref([
-  { name: 'About', href: '/#about', current: true },
-  { name: 'Projects', href: '/#projects', current: false },
-  { name: 'Contact', href: '/#contact', current: false },
+  { name: 'About', href: '#about', current: true },
+  { name: 'Projects', href: '#projects', current: false },
+  { name: 'Contact', href: '#contact', current: false },
 ])
 </script>
