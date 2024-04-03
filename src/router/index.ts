@@ -17,6 +17,14 @@ const routes = [
       hasNavbar: false,
     },
   },
+  {
+    path: '/job-application',
+    name: 'Job Application',
+    component: () => import('@/views/JobApplication.vue'),
+    meta: {
+      hasNavbar: false,
+    },
+  },
 ]
 
 const router = createRouter({
