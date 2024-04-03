@@ -13,18 +13,21 @@
         </div>
         <div class="flex flex-1 items-center justify-center sm:justify-between">
           <div class="relative flex shrink-0 items-center self-stretch py-4">
-            <Logo class="h-16 w-auto" />
+            <RouterLink to="/"><Logo class="h-16 w-auto" /></RouterLink>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <a
                 v-for="item in navigation"
-                @click.prevent="scrollTo(item.href)"
+                @click.prevent="handleClick(item)"
                 :key="item.name"
                 :href="item.href"
                 :class="[
-                  item.current ? 'bg-zinc-50/10 text-white' : 'text-zinc-300 hover:bg-zinc-50/25 hover:text-white',
-                  'rounded-full px-3 py-2 text-sm font-medium',
+                  //item.current ? 'bg-zinc-50/10 text-white' : 'text-zinc-300 hover:bg-zinc-50/25 hover:text-white',
+                  'rounded-full px-3 py-2 text-base font-medium',
+                  item.current ? 'text-white' : 'text-zinc-300 hover:text-white',
+                  'ease-in after:block after:h-0.5 after:max-w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300',
+                  { 'after:max-w-full': item.current },
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
                 >{{ item.name }}</a
@@ -38,11 +41,12 @@
       <div class="space-y-1 px-2 pb-3 pt-2">
         <DisclosureButton
           :href="item.href"
+          @click.prevent="handleClick(item)"
           as="a"
           v-for="(item, itemIdx) in navigation"
           :key="itemIdx"
           :class="[
-            item.current ? 'bg-zinc-950 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white',
+            item.current ? 'bg-zinc-50/10 text-white' : 'text-zinc-300 hover:bg-zinc-50/25 hover:text-white',
             'block rounded-md px-3 py-2 text-base font-medium',
           ]"
           :aria-current="item.current ? 'page' : undefined"
@@ -62,8 +66,18 @@ import { UseScroll } from '@/composables/UseScroll'
 
 const { scrollTo } = UseScroll()
 
+const handleClick = (item: { name: string; href: string; current: boolean }) => {
+  navigation.value = navigation.value.map((navItem) => {
+    return {
+      ...navItem,
+      current: navItem.name === item.name,
+    }
+  })
+  scrollTo(item.href)
+}
+
 const navigation = ref([
-  { name: 'About', href: '#about', current: true },
+  { name: 'About', href: '#about', current: false },
   { name: 'Projects', href: '#projects', current: false },
   { name: 'Contact', href: '#contact', current: false },
 ])
