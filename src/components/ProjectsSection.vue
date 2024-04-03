@@ -1,5 +1,8 @@
 <template>
-  <section id="projects" :class="['mx-auto max-w-7xl px-4 py-8 sm:py-16 xl:px-8', 'prose prose-sm prose-zinc prose-invert']">
+  <section
+    id="projects"
+    :class="['mx-auto max-w-7xl scroll-m-20 px-4 py-8 sm:scroll-m-12 sm:py-16 xl:px-8', 'prose prose-sm prose-zinc prose-invert']"
+  >
     <h2 class="mb-8 mt-4 text-center text-4xl font-bold">Some of My Projects</h2>
 
     <TabGroup @change="handleFilterChange">
