@@ -21,7 +21,7 @@
       ]"
     >
       <div class="aspect-h-3 aspect-w-4 relative overflow-hidden rounded-t-xl">
-        <img :src="imgUrl" :alt="description" class="not-prose aspect-[4/3] object-cover object-left-top" />
+        <img :alt="description" :src="imgUrl" class="not-prose aspect-[4/3] object-cover object-left-top" />
         <div
           :class="[
             'absolute inset-0 flex h-full w-full items-center justify-center',
@@ -51,8 +51,8 @@
 </template>
 
 <script setup lang="ts">
-import { CodeBracketIcon, EyeIcon } from '@heroicons/vue/24/outline'
 import { CardLink } from '@/components'
+import { CodeBracketIcon, EyeIcon } from '@heroicons/vue/24/outline'
 
 defineProps({
   category: {
@@ -75,6 +75,10 @@ defineProps({
     default: '/',
     type: String,
   },
+  isCmyk: {
+    default: false,
+    type: Boolean,
+  },
   previewUrl: {
     default: '/',
     type: String,
@@ -82,10 +86,6 @@ defineProps({
   title: {
     default: '',
     type: String,
-  },
-  isCmyk: {
-    default: false,
-    type: Boolean,
   },
 })
 </script>

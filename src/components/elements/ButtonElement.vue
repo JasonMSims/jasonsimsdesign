@@ -1,7 +1,5 @@
 <template>
   <component
-    :href="to"
-    :is="to ? 'RouterLink' : 'button'"
     :class="[
       'relative inline-block w-full rounded-full text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500 sm:w-fit',
       {
@@ -12,6 +10,8 @@
         'px-8 py-4 text-lg': size === 'lg',
       },
     ]"
+    :href="to"
+    :is="to ? 'RouterLink' : 'button'"
     :to
   >
     <slot></slot>
