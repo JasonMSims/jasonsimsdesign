@@ -1,7 +1,7 @@
 <template>
   <section
-    id="about"
     class="mx-auto grid max-w-7xl scroll-m-20 grid-cols-1 flex-col items-start gap-8 px-12 py-8 sm:scroll-m-12 sm:grid-cols-2 sm:py-16 xl:gap-16 xl:px-12"
+    id="about"
   >
     <div class="relative isolate">
       <img alt="" class="mx-auto h-full w-full rounded-xl object-cover shadow-lg sm:w-full" src="/images/about-image.webp" />
@@ -68,21 +68,21 @@ import { ref } from 'vue'
 const categories = ref([
   {
     content: ['Vue', 'Tailwind CSS', 'Vite', 'Node.js', 'MySQL', 'VS Code'],
-    title: 'Good at',
-    description: "I've got experience with these technologies and tools and love to work with them every day.",
+    description: `I've got experience with these technologies and tools and love to work with them every day.`,
     id: 1,
+    title: 'Good at',
   },
   {
     content: ['MongoDB', 'Typescript', 'Git', 'UX/UI Design', 'Nuxt.js'],
-    title: 'Growing in',
-    description: "I'm learning these and am excited to continue growing my skills.",
+    description: `I'm learning these and am excited to continue growing my skills.`,
     id: 2,
+    title: 'Growing in',
   },
   {
     content: ['React', 'Svelte', 'Next.js'],
-    title: 'Want to learn',
-    description: "I'd like to expand my skillset to include these tools and technologies in the near future.",
+    description: `I'd like to expand my skillset to include these tools and technologies in the near future.`,
     id: 3,
+    title: 'Want to learn',
   },
 ])
 </script>
