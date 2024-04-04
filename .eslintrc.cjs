@@ -15,9 +15,10 @@ module.exports = {
       },
     },
   ],
-  parser: '@typescript-eslint-parser',
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
   plugins: ['vue', 'perfectionist'],
@@ -25,7 +26,7 @@ module.exports = {
     indent: ['error', 2, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'unix'],
     'no-unused-vars': ['warn', { args: 'after-used', ignoreRestSiblings: false, vars: 'local' }],
-    quotes: ['error', 'single'],
+    quotes: ['error', 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     semi: ['error', 'never'],
   },
 }
