@@ -1,4 +1,4 @@
-export const UseScroll = () => {
+export const useScroll = () => {
   const scrollTo = (href: string) => {
     const el = document.querySelector(href)
     if (el) {
