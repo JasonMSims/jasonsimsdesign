@@ -24,10 +24,11 @@
 
 <script setup lang="ts">
 import { ButtonElement } from '@/components'
-import { UseScroll } from '@/composables/UseScroll'
+import { useScroll } from '@/composables'
 import { ref } from 'vue'
 
-const { scrollTo } = UseScroll()
+const { scrollTo } = useScroll()
 
 const name = ref('Jason')
 </script>
+@/composables/useScroll

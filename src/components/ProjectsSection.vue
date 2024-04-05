@@ -7,7 +7,7 @@
 
     <TabGroup @change="handleFilterChange">
       <TabList class="not-prose flex flex-row items-center justify-center gap-2 px-6 py-6">
-        <Tab :key="categoryIdx" as="template" v-for="(category, categoryIdx) in categories" v-slot="{ selected }">
+        <Tab :key="categoryIdx" as="template" v-for="(category, categoryIdx) in projectCategories" v-slot="{ selected }">
           <ButtonElement :button-style="selected ? 'primary' : 'secondary'" class="m-0 sm:m-2">
             {{ category }}
           </ButtonElement>
@@ -19,7 +19,7 @@
           :id="category"
           :key="categoryIdx"
           as="template"
-          v-for="(category, categoryIdx) in categories"
+          v-for="(category, categoryIdx) in projectCategories"
         >
           <TransitionGroup
             appear
@@ -33,7 +33,7 @@
             move-class="transition duration-300 ease-out z-40"
             tag="div"
           >
-            <CardElement :key="project.id" v-for="project in filteredProjects" v-bind="project" />
+            <CardElement :key="project.id" v-for="project in projects" v-bind="project" />
           </TransitionGroup>
         </TabPanel>
       </TabPanels>
@@ -43,94 +43,10 @@
 
 <script setup lang="ts">
 import { ButtonElement, CardElement } from '@/components'
+import { useProjectStore } from '@/stores'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
-import { computed, ref } from 'vue'
+import { storeToRefs } from 'pinia'
 
-interface Project {
-  category: string
-  client: string
-  description: string
-  gitUrl: string
-  id: number
-  imgUrl: string
-  previewUrl: string
-  title: string
-}
-
-const projectFilter = ref<string>('All')
-
-const handleFilterChange = (idx: number) => {
-  projectFilter.value = [...categories.value][idx]
-}
-
-const projects = ref<Project[]>([
-  {
-    category: 'Web',
-    client: 'Digital Insight',
-    description: 'Website Redesign for Republic Bank & Trust',
-    gitUrl: 'https://github.com/JasonMSims',
-    id: 1,
-    imgUrl: '/images/republicbank.webp',
-    previewUrl: 'http://webservices.digitalinsight.com/t/republicbank/',
-    title: 'Republic Bank & Trust',
-  },
-  {
-    category: 'Web',
-    client: 'Digital Insight',
-    description: 'Website Redesign for Central Bank of Utah',
-    gitUrl: 'https://github.com/JasonMSims',
-    id: 2,
-    imgUrl: '/images/centralbank.webp',
-    previewUrl: 'http://webservices.digitalinsight.com/t/centralbankutah/',
-    title: 'Central Bank of Utah',
-  },
-  {
-    category: 'Web',
-    client: 'Jason Sims Design',
-    description: 'Website Redesign for Harbins Community Baptist Church',
-    gitUrl: 'https://github.com/JasonMSims',
-    id: 3,
-    imgUrl: '/images/harbinschurch.webp',
-    previewUrl: 'https://harbinschurch.org',
-    title: 'Harbins Community Baptist Church',
-  },
-  {
-    category: 'Web',
-    client: 'Plethora7',
-    description: 'Sourcery CMS for Plethora7',
-    gitUrl: 'https://github.com/JasonMSims/sourcery-dashboard',
-    id: 4,
-    imgUrl: '/images/sourcery.webp',
-    previewUrl: 'https://sourcery.plethora7.com',
-    title: 'Sourcery',
-  },
-  {
-    category: 'Brand',
-    client: 'Plethora7',
-    description: 'Brand Identity for Plethora7',
-    gitUrl: 'https://github.com/JasonMSims',
-    id: 5,
-    imgUrl: '/images/plethora7.webp',
-    previewUrl: 'https://plethora7.com',
-    title: 'Plethora7',
-  },
-  {
-    category: 'Print',
-    client: 'Nuvalsa',
-    description: 'Packaging Design for Nuvalsa',
-    gitUrl: 'https://github.com/JasonMSims',
-    id: 6,
-    imgUrl: '/images/nuvalsa.webp',
-    previewUrl: 'https://nuvalsa.com',
-    title: 'Nuvalsa',
-  },
-])
-
-const filteredProjects = computed(() =>
-  projectFilter.value === 'All' ? projects.value : projects.value.filter((project) => project.category === projectFilter.value)
-)
-
-const categories = computed(() => {
-  return new Set(['All', ...projects.value.map((project) => project.category)].sort((a, b) => a.localeCompare(b)))
-})
+const { handleFilterChange } = useProjectStore()
+const { projectCategories, projects } = storeToRefs(useProjectStore())
 </script>

@@ -59,12 +59,12 @@
 
 <script setup lang="ts">
 import Logo from '@/assets/images/logo.svg'
-import { UseScroll } from '@/composables/UseScroll'
+import { useScroll } from '@/composables'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
 
-const { scrollTo } = UseScroll()
+const { scrollTo } = useScroll()
 
 const handleClick = (item: { current: boolean; href: string; name: string }) => {
   navigation.value = navigation.value.map((navItem) => {
@@ -82,3 +82,4 @@ const navigation = ref([
   { current: false, href: '#contact', name: 'Contact' },
 ])
 </script>
+@/composables/useScroll
