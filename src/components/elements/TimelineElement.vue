@@ -37,41 +37,23 @@
     <template v-if="achievements && achievements.length > 0">
       <h5>Achievements</h5>
       <ul class="mt-0">
-        <li v-for="(achievement, achievementIdx) in achievements" :key="achievementIdx">{{ achievement }}</li>
+        <li :key="achievementIdx" v-for="(achievement, achievementIdx) in achievements">{{ achievement }}</li>
       </ul>
     </template>
   </div>
 </template>
 
 <script setup lang="ts">
-import { DateTime, DurationUnits } from 'luxon'
+import { useDateFormat } from '@/composables'
 defineProps({
-  formatType: {
-    type: String,
-    default: 'month',
-  },
-  title: { type: String, required: true },
-  organization: String,
-  startDate: { type: Date, required: true },
-  endDate: { type: Date, required: true },
-  description: { type: String, required: true },
-  achievements: { type: Array, required: true },
+  achievements: { required: true, type: Array },
+  description: { required: true, type: String },
+  endDate: { required: true, type: Date },
+  formatType: { default: 'month', type: String },
+  organization: { required: true, type: String },
+  startDate: { required: true, type: Date },
+  title: { required: true, type: String },
 })
 
-const formatDateToMonth = (date: Date) => formatDate(date, { month: 'short', year: 'numeric' })
-const formatDateToYear = (date: Date) => formatDate(date, { year: 'numeric' })
-
-const formatDate = (date: Date, params: object = { month: 'long', year: 'numeric' }) => {
-  const formattedDate = DateTime.fromJSDate(date).toLocaleString(params)
-  return formattedDate === DateTime.now().toLocaleString(params) ? 'Present' : formattedDate
-}
-
-const formatDurationToMonth = (startDate: Date, endDate: Date) => formatDuration(startDate, endDate, ['years', 'months'])
-const formatDurationToYear = (startDate: Date, endDate: Date) => formatDuration(startDate, endDate, ['years'])
-
-const formatDuration = (startDate: Date, endDate: Date, params: DurationUnits = ['years', 'months']) => {
-  const start = DateTime.fromJSDate(startDate)
-  const end = DateTime.fromJSDate(endDate)
-  return end.diff(start, params).toHuman({ maximumFractionDigits: 0 })
-}
+const { formatDateToMonth, formatDateToYear, formatDurationToMonth, formatDurationToYear } = useDateFormat()
 </script>
