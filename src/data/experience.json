@@ -1,0 +1,50 @@
+[
+  {
+    "achievements": [],
+    "description": "Delivered and installed appliances ranging from refrigerators, microwaves, dishwashers, and ovens as well as washers and dryers to customers in the greater Atlanta area. Provided excellent customer service and ensured customer satisfaction.",
+    "endDate": "2008-03-31",
+    "organization": "Bob Bailey's TV & Appliance, Inc.",
+    "startDate": "2006-08-01",
+    "title": "Installation Technician"
+  },
+  {
+    "achievements": [],
+    "description": "Developed designs for vehicle wraps, signage, business cards, and various other forms of marketing. Communicated with the customer to deliver a compelling design within a tight deadline.",
+    "endDate": "2009-10-31",
+    "organization": "One of a Kind Signs",
+    "startDate": "2008-03-01",
+    "title": "Lead Graphic Designer"
+  },
+  {
+    "achievements": [],
+    "description": "Oversaw all inventory transactions, conducted daily cycle counts and yearly physical inventories. Managed Receiving and Returns departments in the Eastern Operations Center. Created standard operating procedures for efficiency, promoted methods for ensuring accuracy, and enforced quality and integrity with all team members.",
+    "endDate": "2016-03-31",
+    "organization": "Mood Media",
+    "startDate": "2010-06-01",
+    "title": "Inventory Control Supervisor"
+  },
+  {
+    "achievements": ["Website Delivery Challenge (2016)"],
+    "description": "Designed custom websites for financial institutions, tailored to their specific brand, needs and goals. Saw site design through from conception to working prototype. Collaborated with development team to ensure that final site met approved design standards.",
+    "endDate": "2018-05-31",
+    "organization": "NCR Corporation",
+    "startDate": "2016-03-01",
+    "title": "Website Designer"
+  },
+  {
+    "achievements": [],
+    "description": "Oversee e-commerce listing creation & optimization, product & brand advertising, and social media marketing. Oversee software development and integration. Responsible for sales forecasting & reporting, product research, & brand relations.",
+    "endDate": null,
+    "organization": "Plethora7",
+    "startDate": "2018-05-01",
+    "title": "Director of Digital Services"
+  },
+  {
+    "achievements": [],
+    "description": "Design and develop websites and web apps of varying complexity for customers with different business needs. Customers include businesses, non-profits, and individuals.",
+    "endDate": null,
+    "organization": "Freelance",
+    "startDate": "2010-06-01",
+    "title": "Full Stack Developer"
+  }
+]

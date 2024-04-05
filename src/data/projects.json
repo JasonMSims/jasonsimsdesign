@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Web",
+    "client": "Digital Insight",
+    "description": "Website Redesign for Republic Bank & Trust",
+    "gitUrl": "https://github.com/JasonMSims",
+    "id": 1,
+    "imgUrl": "/images/republicbank.webp",
+    "previewUrl": "http://webservices.digitalinsight.com/t/republicbank/",
+    "title": "Republic Bank & Trust"
+  },
+  {
+    "category": "Web",
+    "client": "Digital Insight",
+    "description": "Website Redesign for Central Bank of Utah",
+    "gitUrl": "https://github.com/JasonMSims",
+    "id": 2,
+    "imgUrl": "/images/centralbank.webp",
+    "previewUrl": "http://webservices.digitalinsight.com/t/centralbankutah/",
+    "title": "Central Bank of Utah"
+  },
+  {
+    "category": "Web",
+    "client": "Jason Sims Design",
+    "description": "Website Redesign for Harbins Community Baptist Church",
+    "gitUrl": "https://github.com/JasonMSims",
+    "id": 3,
+    "imgUrl": "/images/harbinschurch.webp",
+    "previewUrl": "https://harbinschurch.org",
+    "title": "Harbins Community Baptist Church"
+  },
+  {
+    "category": "Web",
+    "client": "Plethora7",
+    "description": "Sourcery CMS for Plethora7",
+    "gitUrl": "https://github.com/JasonMSims/sourcery-dashboard",
+    "id": 4,
+    "imgUrl": "/images/sourcery.webp",
+    "previewUrl": "https://sourcery.plethora7.com",
+    "title": "Sourcery"
+  },
+  {
+    "category": "Brand",
+    "client": "Plethora7",
+    "description": "Brand Identity for Plethora7",
+    "gitUrl": "https://github.com/JasonMSims",
+    "id": 5,
+    "imgUrl": "/images/plethora7.webp",
+    "previewUrl": "https://plethora7.com",
+    "title": "Plethora7"
+  },
+  {
+    "category": "Print",
+    "client": "Nuvalsa",
+    "description": "Packaging Design for Nuvalsa",
+    "gitUrl": "https://github.com/JasonMSims",
+    "id": 6,
+    "imgUrl": "/images/nuvalsa.webp",
+    "previewUrl": "https://nuvalsa.com",
+    "title": "Nuvalsa"
+  }
+]
