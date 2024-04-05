@@ -1,0 +1,20 @@
+[
+  {
+    "content": ["HTML", "Vanilla JS", "CSS", "SCSS", "Vue", "Tailwind CSS", "Vite", "Node.js", "MySQL", "VS Code"],
+    "description": "I've got experience with these technologies and tools and love to work with them every day.",
+    "title": "Some things I'm good at",
+    "shortTitle": "Good at"
+  },
+  {
+    "content": ["MongoDB", "Typescript", "Git", "UX/UI Design", "Nuxt.js"],
+    "description": "I'm learning these and am excited to continue growing my skills.",
+    "title": "Some things I'm growing in",
+    "shortTitle": "Growing in"
+  },
+  {
+    "content": ["React", "Svelte", "Alpine", "Next.js"],
+    "description": "I'd like to expand my skill set to include these tools and technologies in the near future.",
+    "title": "Some things I want to learn",
+    "shortTitle": "Want to learn"
+  }
+]
