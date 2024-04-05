@@ -89,9 +89,9 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
 
-import GithubLogo from '@/assets/images/github.svg'
-import LinkedinLogo from '@/assets/images/linkedin.svg'
 import { ButtonElement, FormInput } from '@/components'
+import { useSocialMediaStore } from '@/stores'
+import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 
 const firstName = ref('')
@@ -102,18 +102,7 @@ const message = ref('')
 
 const sentMessage = ref<boolean | string>(false)
 
-const socialMedia = [
-  {
-    logo: GithubLogo,
-    name: 'Github',
-    url: 'https://github.com/JasonMSims',
-  },
-  {
-    logo: LinkedinLogo,
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/jasonsimsdesign/',
-  },
-]
+const { socialMedia } = storeToRefs(useSocialMediaStore())
 
 const resetInput = (input: Ref<boolean | string>, value: boolean | string, delay: number) => {
   setTimeout(() => {

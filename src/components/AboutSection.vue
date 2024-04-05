@@ -9,21 +9,10 @@
     </div>
     <div class="prose prose-zinc prose-invert">
       <h2>A Little Bit About Me</h2>
-      <p>
-        I started my career as a freelance graphic designer and quickly realized I needed a website. I've always wanted to build things myself and
-        understand how they tick - and this was no exception. I dove head first into learning how to build a website, and that marked a huge mindset
-        shift for me as I realized that code can
-        <span class="font-medium italic">&mdash; and should &mdash;</span> be beautifully and intentionally designed too.
-      </p>
-
-      <p>
-        Fast-forward several years, and I have had the privilege of working with and for several great organizations, including my time at
-        <a href="https://www.ncr.com/banking" target="_blank">NCR</a>, where I designed responsive websites for a number of financial institutions.
-      </p>
-      <p>I'm self-taught and always learning and growing. If I don't know how to do something yet, I'll figure it out!</p>
+      <AboutContent />
       <TabGroup>
         <TabList class="mt-8 flex gap-4">
-          <Tab :key="titleIdx" as="template" v-for="({ title }, titleIdx) in categories" v-slot="{ selected }">
+          <Tab :key="titleIdx" as="template" v-for="({ shortTitle: title }, titleIdx) in skills" v-slot="{ selected }">
             <button
               :class="[
                 'text-left max-sm:grow max-sm:py-4',
@@ -41,8 +30,8 @@
         <TabPanels>
           <TabPanel
             :class="['rounded-sm', 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500']"
-            :key="categoryIdx"
-            v-for="({ content, description }, categoryIdx) in categories"
+            :key="skillIdx"
+            v-for="({ content, description }, skillIdx) in skills"
           >
             <p class="my-2 text-sm leading-5 text-zinc-400">{{ description }}</p>
             <div class="flex flex-wrap gap-2">
@@ -62,27 +51,10 @@
 </template>
 
 <script setup lang="ts">
+import AboutContent from '@/content/about.md'
+import { useSkillStore } from '@/stores'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
-import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
 
-const categories = ref([
-  {
-    content: ['Vue', 'Tailwind CSS', 'Vite', 'Node.js', 'MySQL', 'VS Code'],
-    description: `I've got experience with these technologies and tools and love to work with them every day.`,
-    id: 1,
-    title: 'Good at',
-  },
-  {
-    content: ['MongoDB', 'Typescript', 'Git', 'UX/UI Design', 'Nuxt.js'],
-    description: `I'm learning these and am excited to continue growing my skills.`,
-    id: 2,
-    title: 'Growing in',
-  },
-  {
-    content: ['React', 'Svelte', 'Next.js'],
-    description: `I'd like to expand my skillset to include these tools and technologies in the near future.`,
-    id: 3,
-    title: 'Want to learn',
-  },
-])
+const { skills } = storeToRefs(useSkillStore())
 </script>
