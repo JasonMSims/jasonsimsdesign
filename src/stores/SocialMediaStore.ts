@@ -7,7 +7,7 @@ export const useSocialMediaStore = defineStore('socialMedia', () => {
   const socialMedia = ref([
     {
       logo: shallowRef(GithubLogo),
-      name: 'Github',
+      name: 'GitHub',
       url: 'https://github.com/JasonMSims',
     },
     {
