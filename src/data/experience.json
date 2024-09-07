@@ -1,50 +1,154 @@
 [
   {
-    "achievements": [],
-    "description": "Delivered and installed appliances ranging from refrigerators, microwaves, dishwashers, and ovens as well as washers and dryers to customers in the greater Atlanta area. Provided excellent customer service and ensured customer satisfaction.",
+    "achievements": [
+      {
+        "text": "Delivered and installed a wide range of appliances (refrigerators, microwaves, dishwashers, ovens, washers, and dryers) to customers across the greater Atlanta area."
+      },
+      {
+        "text": "Ensured high levels of customer satisfaction through excellent service, problem-solving, and effective communication."
+      }
+    ],
     "endDate": "2008-03-31",
     "organization": "Bob Bailey's TV & Appliance, Inc.",
     "startDate": "2006-08-01",
-    "title": "Installation Technician"
+    "title": "Installation Technician",
+    "location": "Stone Mountain, GA",
+    "tools": []
   },
   {
-    "achievements": [],
-    "description": "Developed designs for vehicle wraps, signage, business cards, and various other forms of marketing. Communicated with the customer to deliver a compelling design within a tight deadline.",
+    "achievements": [
+      {
+        "text": "Developed compelling designs for vehicle wraps, signage, business cards, and various other print and digital marketing materials, often under tight deadlines."
+      },
+      {
+        "text": "Promoted to Lead Graphic Designer, leading creative direction and project management."
+      },
+      {
+        "text": "Collaborated closely with clients to refine designs and with the production team to ensure timely delivery of high-quality finished products."
+      }
+    ],
     "endDate": "2009-10-31",
     "organization": "One of a Kind Signs",
     "startDate": "2008-03-01",
-    "title": "Lead Graphic Designer"
+    "title": "Lead Graphic Designer",
+    "location": "Loganville, GA",
+    "tools": ["Adobe Photoshop", "Adobe Illustrator", "FlexiSign"]
   },
   {
-    "achievements": [],
-    "description": "Oversaw all inventory transactions, conducted daily cycle counts and yearly physical inventories. Managed Receiving and Returns departments in the Eastern Operations Center. Created standard operating procedures for efficiency, promoted methods for ensuring accuracy, and enforced quality and integrity with all team members.",
+    "achievements": [
+      {
+        "title": "Rapid Career Advancement",
+        "text": "Started as a Material Handler with DMX in 2010 and was quickly promoted to RMA Coordinator within six months. Advanced to Inventory Control Supervisor in 2011, overseeing all inventory transactions, daily cycle counts, and yearly physical inventories."
+      },
+      {
+        "title": "Post-Merger Responsibility Expansion",
+        "text": "After the merger with Mood Media in 2012, took on responsibility for inventory management across all U.S. warehouses. Conducted site visits to every U.S. warehouse in 2014 to lead physical inventories and implement best practices."
+      },
+      {
+        "title": "Process Optimization",
+        "text": "Created and implemented standard operating procedures (SOPs) to enhance efficiency, accuracy, and quality in the Receiving, Returns, and Fabrication departments of the Atlanta Operations Center (AOC). Promoted methods for maintaining high standards in inventory and financial accuracy and trained team members to adhere to these guidelines."
+      },
+      {
+        "title": "Subject Matter Expert (SME)",
+        "text": "Recognized as an official SME in Oracle EBS for several business processes, including inventory, manufacturing, and purchasing, assuming primary responsibility for testing and training in these areas. Collaborated with the company's Controller and external auditors to ensure inventory reporting accuracy and compliance with best practices."
+      },
+      {
+        "title": "Data Analysis and Reporting",
+        "text": "Transitioned into data analysis by partnering with the Senior Data Analyst to develop advanced analytical skills, including complex SQL database queries and custom BI reporting."
+      },
+      {
+        "title": "Advanced Excel Expertise",
+        "text": "Developed and led Excel training seminars for management personnel in the AOC, enhancing their ability to utilize advanced Excel functions for inventory management, reporting, and data analysis."
+      }
+    ],
     "endDate": "2016-03-31",
     "organization": "Mood Media",
     "startDate": "2010-06-01",
-    "title": "Inventory Control Supervisor"
+    "title": "Inventory Control Supervisor",
+    "location": "Norcross, GA",
+    "tools": ["Oracle EBS", "Advanced Excel", "SQL", "Business Intelligence (BI) Reporting"]
   },
   {
-    "achievements": ["Website Delivery Challenge (2016)"],
-    "description": "Designed custom websites for financial institutions, tailored to their specific brand, needs and goals. Saw site design through from conception to working prototype. Collaborated with development team to ensure that final site met approved design standards.",
+    "achievements": [
+      {
+        "title": "Custom Website Design",
+        "text": "Designed tailored websites for financial institutions, managing projects from initial concept to functional prototypes, ensuring alignment with the client's brand, needs, and aspirational goals."
+      },
+      {
+        "title": "Front-End Development",
+        "text": "Developed sites using HTML, SCSS, Bootstrap, and Vanilla JavaScript; collaborated closely with the development team to meet approved design standards, with a strong emphasis on accessibility, adhering to WCAG (Web Content Accessibility Guidelines) standards."
+      },
+      {
+        "title": "Technical Leadership",
+        "text": "Introduced the team to Visual Studio Code and became the primary coder for design mockups, handling both personal and team projects. Built a custom micro-framework with standardized SCSS and JavaScript functions, adopted by all team members to streamline prototyping and development processes."
+      },
+      {
+        "title": "Process Efficiency",
+        "text": "Reduced prototype delivery times from the standard two-week window to as little as three days by transitioning from static mockups in Photoshop to a code-first approach, enabling quicker iterations, improved efficiency, and increased client satisfaction."
+      },
+      {
+        "title": "React Development",
+        "text": "Created a complex, multi-step React form for customer intake, enhancing user experience and data collection efficiency."
+      },
+      {
+        "title": "Award Recognition",
+        "text": "Awarded the “Web Delivery Challenge” in 2016 for consistently moving clients from concept to approved, functional prototypes faster than the company benchmark."
+      }
+    ],
     "endDate": "2018-05-31",
-    "organization": "NCR Corporation",
+    "organization": "NCR Voyix",
     "startDate": "2016-03-01",
-    "title": "Website Designer"
+    "title": "Website Designer",
+    "location": "Athens, GA",
+    "tools": ["HTML", "SCSS", "Bootstrap", "JavaScript", "React", "Photoshop", "Visual Studio Code", "GitHub"]
   },
   {
-    "achievements": [],
-    "description": "Oversee e-commerce listing creation & optimization, product & brand advertising, and social media marketing. Oversee software development and integration. Responsible for sales forecasting & reporting, product research, & brand relations.",
+    "achievements": [
+      {
+        "title": "Revenue Growth",
+        "text": "Engineered custom Node.js and GAS (Google Apps Script) software integrations, increasing efficiency and scaling company revenue from $3M to $10M annually by leveraging 3rd-Party REST APIs, including Amazon's Selling Partner API and Walmart's Developer API."
+      },
+      {
+        "title": "Process Enhancement",
+        "text": "Developed and deployed in-house tools built with Node.js and Vue.js for sales performance reporting, advertising reporting, inventory replenishment & forecasting, and internal communication, significantly improving efficiency across departments."
+      },
+      {
+        "title": "Database Engineering",
+        "text": "Architected and maintained MySQL and MongoDB databases, optimizing relational table & document schemas and performing advanced queries to support data-driven business decisions."
+      },
+      {
+        "title": "Website Development",
+        "text": "Developed and integrated WooCommerce websites with custom connections to the WMS platform, including custom PHP plugins and JavaScript webhooks, driving new revenue through B2B and D2C sales."
+      },
+      {
+        "title": "ERP Implementation",
+        "text": "Led the integration of Odoo, scoping and implementing Accounting, CRM, Inventory, and E-commerce business needs, and developing custom Python modules including an RFM Analysis Suite and Return Shipping module."
+      }
+    ],
     "endDate": null,
     "organization": "Plethora7",
     "startDate": "2018-05-01",
-    "title": "Director of Digital Services"
-  },
-  {
-    "achievements": [],
-    "description": "Design and develop websites and web apps of varying complexity for customers with different business needs. Customers include businesses, non-profits, and individuals.",
-    "endDate": null,
-    "organization": "Freelance",
-    "startDate": "2010-06-01",
-    "title": "Full Stack Developer"
+    "title": "Software Engineer, Digital Services",
+    "location": "Winder, GA",
+    "tools": [
+      "Node.js",
+      "Python",
+      "PHP",
+      "Vue.js",
+      "React",
+      "Google Apps Script",
+      "Amazon Selling Partner API",
+      "Amazon Advertising API",
+      "Walmart Developer API",
+      "SkuVault API",
+      "ShipStation API",
+      "MySQL",
+      "Postgres",
+      "MongoDB",
+      "GitHub",
+      "Google Clasp",
+      "DigitalOcean",
+      "Odoo.sh"
+    ]
   }
 ]

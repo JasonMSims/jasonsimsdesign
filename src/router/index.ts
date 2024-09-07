@@ -2,28 +2,29 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
     component: () => import('@/views/Home.vue'),
     meta: {
       hasNavbar: true,
     },
+    name: 'Home',
+    path: '/',
   },
   {
-    path: '/resume',
-    name: 'Resume',
     component: () => import('@/views/Resume.vue'),
     meta: {
       hasNavbar: false,
     },
+    name: 'Resume',
+    path: '/resume',
   },
   {
-    path: '/job-application',
-    name: 'Job Application',
     component: () => import('@/views/JobApplication.vue'),
     meta: {
       hasNavbar: false,
     },
+    name: 'Job Application',
+    path: '/job-application/:company',
+    props: true,
   },
 ]
 

@@ -1,18 +1,10 @@
+import type { Project } from '@/types'
+
 import ProjectData from '@/data/projects.json'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
 export const useProjectStore = defineStore('projects', () => {
-  interface Project {
-    category: string
-    client: string
-    description: string
-    gitUrl: string
-    id: number
-    imgUrl: string
-    previewUrl: string
-    title: string
-  }
   const projectFilter = ref<string>('All')
 
   const projects = ref<Project[]>(ProjectData)

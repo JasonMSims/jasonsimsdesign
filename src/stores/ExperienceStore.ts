@@ -1,18 +1,11 @@
+import type { TimelineItem } from '@/types'
+
 import ExperienceData from '@/data/experience.json'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 
 export const useExperienceStore = defineStore('experience', () => {
-  interface Experience {
-    achievements: string[]
-    description: string
-    endDate: Date
-    organization: string
-    startDate: Date
-    title: string
-  }
-
-  const experience = ref<Experience[]>(
+  const experience = ref<TimelineItem[]>(
     ExperienceData.map((item) => ({
       ...item,
       endDate: item.endDate ? new Date(item.endDate) : new Date(),
@@ -20,7 +13,9 @@ export const useExperienceStore = defineStore('experience', () => {
     }))
   )
 
-  const sortedExperience = computed(() => [...experience.value].sort((a: Experience, b: Experience) => a.startDate.getTime() - b.startDate.getTime()))
+  const sortedExperience = computed(() =>
+    [...experience.value].sort((a: TimelineItem, b: TimelineItem) => b.startDate.getTime() - a.startDate.getTime())
+  )
 
   return { experience, sortedExperience }
 })

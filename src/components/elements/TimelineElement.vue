@@ -2,7 +2,7 @@
   <div :class="['group relative max-w-3xl py-4 pl-8 sm:pl-32']">
     <h3
       :class="[
-        'mt-4 inline-block font-bold sm:text-2xl',
+        'mt-4 inline-block font-bold tracking-tight sm:text-2xl',
         'ease-in after:block after:h-0.5 after:max-w-12 after:rounded-full after:bg-gradient-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300 group-hover:after:max-w-full',
       ]"
     >
@@ -11,7 +11,7 @@
     <div
       :class="[
         'mb-1 flex flex-row flex-wrap gap-x-2',
-        'before:absolute before:left-2 before:h-full before:-translate-x-1/2 before:translate-y-3 before:bg-zinc-200/50 before:px-px sm:before:left-0 sm:before:ml-[6.5rem]',
+        'before:absolute before:left-2 before:h-full before:-translate-x-1/2 before:translate-y-3 before:bg-zinc-200/25 before:px-px sm:before:left-0 sm:before:ml-[6.5rem]',
         'after:absolute after:left-2 after:box-content after:h-2 after:w-2 after:-translate-x-1/2 after:translate-y-1 after:rounded-full after:border-4 after:border-zinc-950 after:bg-gradient-to-br after:from-cyan-500 after:to-emerald-500 sm:after:left-0 sm:after:ml-[6.5rem]',
       ]"
     >
@@ -33,11 +33,14 @@
       </span>
       <h4 class="basis-full sm:mt-0">{{ organization }}</h4>
     </div>
-    <p class="max-sm:my-2">{{ description }}</p>
+    <p class="max-sm:my-2" v-if="description">{{ description }}</p>
     <template v-if="achievements && achievements.length > 0">
-      <h5>Achievements</h5>
+      <h5 class="font-semibold">Key Achievements</h5>
       <ul class="mt-0">
-        <li :key="achievementIdx" v-for="(achievement, achievementIdx) in achievements">{{ achievement }}</li>
+        <li :key="achievementIdx" class="font-light" v-for="(achievement, achievementIdx) in achievements">
+          <span class="font-extrabold" v-if="achievement.title">{{ achievement.title }}:</span>
+          {{ achievement.text }}
+        </li>
       </ul>
     </template>
   </div>
@@ -45,14 +48,10 @@
 
 <script setup lang="ts">
 import { useDateFormat } from '@/composables'
-defineProps({
-  achievements: { required: true, type: Array },
-  description: { required: true, type: String },
-  endDate: { required: true, type: Date },
-  formatType: { default: 'month', type: String },
-  organization: { required: true, type: String },
-  startDate: { required: true, type: Date },
-  title: { required: true, type: String },
+import { TimelineItem } from '@/types'
+
+withDefaults(defineProps<TimelineItem>(), {
+  formatType: 'month',
 })
 
 const { formatDateToMonth, formatDateToYear, formatDurationToMonth, formatDurationToYear } = useDateFormat()
