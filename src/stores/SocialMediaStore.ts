@@ -1,10 +1,12 @@
 import GithubLogo from '@/assets/images/github.svg'
 import LinkedinLogo from '@/assets/images/linkedin.svg'
+import XLogo from '@/assets/images/x.svg'
+import { SocialMedia } from '@/types'
 import { defineStore } from 'pinia'
 import { ref, shallowRef } from 'vue'
 
 export const useSocialMediaStore = defineStore('socialMedia', () => {
-  const socialMedia = ref([
+  const socialMedia = ref<SocialMedia[]>([
     {
       logo: shallowRef(GithubLogo),
       name: 'GitHub',
@@ -13,7 +15,12 @@ export const useSocialMediaStore = defineStore('socialMedia', () => {
     {
       logo: shallowRef(LinkedinLogo),
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/jasonsimsdesign/',
+      url: 'https://www.linkedin.com/in/jasonsimsdev/',
+    },
+    {
+      logo: shallowRef(XLogo),
+      name: 'X',
+      url: 'https://x.com/jasonmsims',
     },
   ])
 
