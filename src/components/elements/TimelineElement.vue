@@ -43,6 +43,18 @@
         </li>
       </ul>
     </template>
+    <template v-if="tools && tools.length > 0">
+      <h5 class="font-semibold">Technologies & Tools</h5>
+      <div class="flex flex-wrap gap-2">
+        <span
+          :class="['rounded-full bg-zinc-50/10 px-3 py-1.5 text-sm font-medium hover:text-white']"
+          :key="itemIdx"
+          v-for="(item, itemIdx) in tools"
+        >
+          {{ item }}
+        </span>
+      </div>
+    </template>
   </div>
 </template>
 
