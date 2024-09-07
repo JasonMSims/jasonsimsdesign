@@ -1,17 +1,18 @@
 [
   {
     "achievements": [],
-    "description": "Attended all core classes with an aim to focus on the website design program, acquiring fundamental skills in website design, such as HTML, CSS, and Javascript. I left college prior to completing my program in order to focus on providing for my family.",
-    "endDate": "2010-05-01",
+    "description": "Completed core courses within the website design program. Transitioned to full-time work to support my family while continuing self-directed learning.",
+    "endDate": "2010-06-01",
     "organization": "Gwinnett Technical College",
-    "startDate": "2008-05-01",
-    "title": "Website Design"
+    "startDate": "2008-08-01",
+    "title": "Website Design",
+    "location": "Lawrenceville, GA"
   },
   {
     "achievements": [],
-    "description": "I've watched 1,000's of hours of tutorials on Youtube and other platforms to learn web development, design, and marketing. I've read 100's of pages of docs to understand how to use different tools and technologies.",
+    "description": "Engaged in continuous education through thousands of hours of online tutorials, courses, and self-study to master web development, design, and digital marketing. Regularly review documentation and resources to stay current with evolving tools and technologies.",
     "endDate": null,
-    "organization": "The Internet",
+    "organization": "Self-Directed Learning",
     "startDate": "2010-06-01",
     "title": "Lifelong Learner"
   }

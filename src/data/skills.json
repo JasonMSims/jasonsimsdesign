@@ -1,12 +1,12 @@
 [
   {
-    "content": ["HTML", "Vanilla JS", "CSS", "SCSS", "Vue", "Tailwind CSS", "Vite", "Node.js", "MySQL", "VS Code"],
+    "content": ["HTML", "Vanilla JS", "CSS", "SCSS", "Vue", "Tailwind CSS", "Vite", "Node.js", "MySQL", "VS Code", "Git"],
     "description": "I've got experience with these technologies and tools and love to work with them every day.",
     "title": "Some things I'm good at",
     "shortTitle": "Good at"
   },
   {
-    "content": ["MongoDB", "Typescript", "Git", "UX/UI Design", "Nuxt.js"],
+    "content": ["MongoDB", "Typescript", "UX/UI Design", "Nuxt.js"],
     "description": "I'm learning these and am excited to continue growing my skills.",
     "title": "Some things I'm growing in",
     "shortTitle": "Growing in"

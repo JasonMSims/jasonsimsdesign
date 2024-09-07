@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter var', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        writing: ['Permanent Marker', 'cursive'],
       },
     },
   },

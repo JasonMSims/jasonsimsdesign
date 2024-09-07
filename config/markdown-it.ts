@@ -1,13 +1,12 @@
-import MarkdownIt from 'markdown-it'
-import markdownItAttrs from 'markdown-it-attrs'
-import mila from 'markdown-it-link-attributes'
+import Attributes from 'markdown-it-attrs'
+import LinkAttributes from 'markdown-it-link-attributes'
 
-export default function markdownItSetup(md: MarkdownIt) {
-  md.use(mila, {
+export const markdownItSetup = (md) => {
+  md.use(LinkAttributes, {
     attrs: {
       rel: 'noopener',
       target: '_blank',
     },
     pattern: /^https?:/,
-  }).use(markdownItAttrs, {})
+  }).use(Attributes, {})
 }

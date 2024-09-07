@@ -7,11 +7,11 @@
           <span class="inline-flex flex-nowrap items-center">{{ name }}</span>
         </h1>
         <p class="mb-6 text-sm text-zinc-300 sm:text-lg lg:text-xl">
-          I'm a graphic designer
+          I'm a software engineer
           <span class="bg-gradient-to-r from-cyan-500 to-emerald-500 bg-clip-text text-lg font-bold text-transparent sm:text-xl lg:text-2xl"
             >&amp;</span
           >
-          full-stack web developer.
+          graphic designer.
         </p>
         <ButtonElement @click.prevent="scrollTo('#contact')" href="#contact">Hire Me</ButtonElement>
       </div>
@@ -31,4 +31,3 @@ const { scrollTo } = useScroll()
 
 const name = ref('Jason')
 </script>
-@/composables/useScroll
