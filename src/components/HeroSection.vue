@@ -15,7 +15,7 @@
         </p>
         <ButtonElement @click.prevent="scrollTo('#contact')" href="#contact">Hire Me</ButtonElement>
       </div>
-      <div class="mx-auto max-w-sm rounded-full bg-zinc-50/5 max-sm:-order-1 sm:col-span-4">
+      <div class="mx-auto max-w-sm rounded-full bg-cyan-500/10 max-sm:-order-1 sm:col-span-4">
         <img alt="Jason Sims" class="relative h-full w-full" src="@/assets/images/me.webp" />
       </div>
     </div>
