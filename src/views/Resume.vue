@@ -20,7 +20,7 @@
       <div>
         <ul class="not-prose flex flex-col gap-4" role="list">
           <li :key="social.name" class="flex" v-for="social in socialMedia">
-            <a :href="social.url" class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white" target="_blank">
+            <a :href="social.url" class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white" rel="noopener noreferrer" target="_blank">
               <component
                 :alt="social.name"
                 :is="social.logo"
@@ -34,6 +34,7 @@
             <a
               class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white"
               href="mailto:jason@jasonsims.dev"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <component

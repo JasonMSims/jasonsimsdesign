@@ -12,7 +12,7 @@
       <div>
         <ul class="not-prose flex flex-col gap-4" role="list">
           <li :key="social.name" class="flex" v-for="social in socialMedia">
-            <a :href="social.url" class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white" target="_blank">
+            <a :href="social.url" class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white" rel="noopener noreferrer" target="_blank">
               <component
                 :alt="social.name"
                 :is="social.logo"
@@ -26,6 +26,7 @@
             <a
               class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white"
               href="mailto:jason@jasonsims.dev"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <component
@@ -49,7 +50,7 @@ import type { Component } from 'vue'
 import { useSocialMediaStore } from '@/stores'
 import { MailIcon } from 'lucide-vue-next'
 import { computed, defineAsyncComponent } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const contentMapping: Record<string, () => Promise<{ default: Component }>> = {
   google: () => import('@/content/job-application/google.md'),
@@ -60,10 +61,16 @@ const contentMapping: Record<string, () => Promise<{ default: Component }>> = {
 const { socialMedia } = useSocialMediaStore()
 
 const route = useRoute()
+const router = useRouter()
 
 const company = route.params.company as string
 
+if (!(company in contentMapping)) {
+  router.replace('/')
+}
+
 const jobApplicationContent = computed(() => {
+  if (!(company in contentMapping)) return null
   return defineAsyncComponent(contentMapping[company])
 })
 </script>

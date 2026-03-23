@@ -43,7 +43,7 @@
             to get in touch.
           </p>
           <div class="flex flex-row gap-4">
-            <a :href="social.url" :key="social.name" target="_blank" v-for="social in socialMedia">
+            <a :href="social.url" :key="social.name" rel="noopener noreferrer" target="_blank" v-for="social in socialMedia">
               <component :alt="social.name" :is="social.logo" class="h-10 w-10 fill-zinc-100" />
             </a>
           </div>
@@ -94,11 +94,14 @@ import { useSocialMediaStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 
+const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL
+
 const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const subject = ref('')
 const message = ref('')
+const isSubmitting = ref(false)
 
 const sentMessage = ref<boolean | string>(false)
 
@@ -110,15 +113,27 @@ const resetInput = (input: Ref<boolean | string>, value: boolean | string, delay
   }, delay)
 }
 
-const sanitizeInput = (input: string) => {
-  const div = document.createElement('div')
-  div.textContent = input.trim()
-  return div.innerHTML
+const sanitizeInput = (input: string): string => {
+  return input.trim().replace(/[&<>"'/]/g, (char) => {
+    const entities: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#x27;',
+      '/': '&#x2F;',
+    }
+    return entities[char] ?? char
+  })
 }
 
 const handleSubmit = async () => {
+  if (isSubmitting.value || !CONTACT_API_URL) return
+
+  isSubmitting.value = true
+
   try {
-    let data = {
+    const data = {
       email: sanitizeInput(email.value),
       firstName: sanitizeInput(firstName.value),
       lastName: sanitizeInput(lastName.value),
@@ -126,7 +141,7 @@ const handleSubmit = async () => {
       subject: sanitizeInput(subject.value),
     }
 
-    const response = await fetch('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-6d842a4d-441d-42b0-94a8-1596a6b0d1c0/email/email', {
+    const response = await fetch(CONTACT_API_URL, {
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
@@ -134,7 +149,10 @@ const handleSubmit = async () => {
       method: 'POST',
     })
 
-    data = await response.json()
+    if (!response.ok) {
+      throw new Error('Failed to send message')
+    }
+
     // Reset all form fields
     firstName.value = ''
     lastName.value = ''
@@ -143,8 +161,11 @@ const handleSubmit = async () => {
     message.value = ''
     sentMessage.value = 'Thanks for your message! I will get back to you as soon as possible.'
     resetInput(sentMessage, false, 5000)
-  } catch (error) {
-    console.log(error)
+  } catch {
+    sentMessage.value = 'Something went wrong. Please try again later.'
+    resetInput(sentMessage, false, 5000)
+  } finally {
+    isSubmitting.value = false
   }
 }
 </script>
