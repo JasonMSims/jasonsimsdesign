@@ -1,9 +1,10 @@
+import { defineStore } from 'pinia'
+import { ref, shallowRef } from 'vue'
+
 import GithubLogo from '@/assets/images/github.svg'
 import LinkedinLogo from '@/assets/images/linkedin.svg'
 import XLogo from '@/assets/images/x.svg'
 import { SocialMedia } from '@/types'
-import { defineStore } from 'pinia'
-import { ref, shallowRef } from 'vue'
 
 export const useSocialMediaStore = defineStore('socialMedia', () => {
   const socialMedia = ref<SocialMedia[]>([

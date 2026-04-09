@@ -58,11 +58,12 @@
 </template>
 
 <script setup lang="ts">
-import Logo from '@/assets/images/logo.svg'
-import { useScroll } from '@/composables'
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
+
+import Logo from '@/assets/images/logo.svg'
+import { useScroll } from '@/composables'
 
 const { scrollTo } = useScroll()
 

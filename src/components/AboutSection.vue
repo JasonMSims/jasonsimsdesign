@@ -51,10 +51,11 @@
 </template>
 
 <script setup lang="ts">
-import AboutContent from '@/content/about.md'
-import { useSkillStore } from '@/stores'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import { storeToRefs } from 'pinia'
+
+import AboutContent from '@/content/about.md'
+import { useSkillStore } from '@/stores'
 
 const { skills } = storeToRefs(useSkillStore())
 </script>

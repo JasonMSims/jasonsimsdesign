@@ -53,10 +53,11 @@
 </template>
 
 <script setup lang="ts">
-import { TimelineElement } from '@/components'
-import { useCourseStore, useExperienceStore, useSocialMediaStore } from '@/stores'
 import { MailIcon } from 'lucide-vue-next'
 import { storeToRefs } from 'pinia'
+
+import { TimelineElement } from '@/components'
+import { useCourseStore, useExperienceStore, useSocialMediaStore } from '@/stores'
 
 const { socialMedia } = storeToRefs(useSocialMediaStore())
 const { sortedEducation } = storeToRefs(useCourseStore())

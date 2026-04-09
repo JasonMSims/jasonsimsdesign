@@ -5,8 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { FooterSection, NavbarSection } from '@/components'
 import { useRoute } from 'vue-router'
+
+import { FooterSection, NavbarSection } from '@/components'
 
 const route = useRoute()
 </script>

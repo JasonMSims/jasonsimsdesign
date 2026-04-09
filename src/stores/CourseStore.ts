@@ -1,8 +1,9 @@
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
+
 import type { TimelineItem } from '@/types'
 
 import CourseData from '@/data/courses.json'
-import { defineStore } from 'pinia'
-import { computed, ref } from 'vue'
 
 export const useCourseStore = defineStore('courses', () => {
   const education = ref<TimelineItem[]>(

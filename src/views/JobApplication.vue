@@ -47,10 +47,11 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
 
-import { useSocialMediaStore } from '@/stores'
 import { MailIcon } from 'lucide-vue-next'
 import { computed, defineAsyncComponent } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+
+import { useSocialMediaStore } from '@/stores'
 
 const contentMapping: Record<string, () => Promise<{ default: Component }>> = {
   google: () => import('@/content/job-application/google.md'),

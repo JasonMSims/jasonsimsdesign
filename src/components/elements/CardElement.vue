@@ -51,8 +51,9 @@
 </template>
 
 <script setup lang="ts">
-import { CardLink } from '@/components'
 import { CodeBracketIcon, EyeIcon } from '@heroicons/vue/24/outline'
+
+import { CardLink } from '@/components'
 
 defineProps({
   category: {

@@ -23,9 +23,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import { ButtonElement } from '@/components'
 import { useScroll } from '@/composables'
-import { ref } from 'vue'
 
 const { scrollTo } = useScroll()
 

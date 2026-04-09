@@ -42,10 +42,11 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonElement, CardElement } from '@/components'
-import { useProjectStore } from '@/stores'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import { storeToRefs } from 'pinia'
+
+import { ButtonElement, CardElement } from '@/components'
+import { useProjectStore } from '@/stores'
 
 const { handleFilterChange } = useProjectStore()
 const { projectCategories, projects } = storeToRefs(useProjectStore())

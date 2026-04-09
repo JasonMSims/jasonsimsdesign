@@ -89,10 +89,11 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
 
-import { ButtonElement, FormInput } from '@/components'
-import { useSocialMediaStore } from '@/stores'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
+
+import { ButtonElement, FormInput } from '@/components'
+import { useSocialMediaStore } from '@/stores'
 
 const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL
 
@@ -116,12 +117,12 @@ const resetInput = (input: Ref<boolean | string>, value: boolean | string, delay
 const sanitizeInput = (input: string): string => {
   return input.trim().replace(/[&<>"'/]/g, (char) => {
     const entities: Record<string, string> = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
       '"': '&quot;',
+      '&': '&amp;',
       "'": '&#x27;',
       '/': '&#x2F;',
+      '<': '&lt;',
+      '>': '&gt;',
     }
     return entities[char] ?? char
   })
