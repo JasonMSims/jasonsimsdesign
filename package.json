@@ -55,7 +55,7 @@
     "tailwindcss": "^3.4.19",
     "typescript": "^5.9.3",
     "unplugin-vue-components": "^0.27.5",
-    "vite": "^6.4.1",
+    "vite": "^6.4.2",
     "vite-svg-loader": "^5.1.1",
     "vue-tsc": "^2.2.12"
   }
