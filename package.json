@@ -19,7 +19,7 @@
     "markdown-it": "^14.3.0",
     "markdown-it-attrs": "^4.5.0",
     "markdown-it-link-attributes": "^4.0.1",
-    "pinia": "^2.3.1",
+    "pinia": "^4.0.3",
     "unplugin-vue-markdown": "^0.26.3",
     "vue": "^3.5.41",
     "vue-router": "^4.6.4",
