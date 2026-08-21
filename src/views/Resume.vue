@@ -53,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import { MailIcon } from 'lucide-vue-next'
+import { MailIcon } from '@lucide/vue'
 import { storeToRefs } from 'pinia'
 
 import { TimelineElement } from '@/components'

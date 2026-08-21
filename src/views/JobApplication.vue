@@ -47,7 +47,7 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
 
-import { MailIcon } from 'lucide-vue-next'
+import { MailIcon } from '@lucide/vue'
 import { computed, defineAsyncComponent } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
