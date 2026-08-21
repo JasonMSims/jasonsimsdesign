@@ -16,10 +16,10 @@
             <button
               :class="[
                 'text-left max-sm:grow max-sm:py-4',
-                'rounded-sm font-semibold transition-colors duration-200 hover:text-white',
-                'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500',
+                'rounded-xs font-semibold transition-colors duration-200 hover:text-white',
+                'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500 focus-visible:outline-solid',
                 { 'text-white': selected },
-                'ease-in after:block after:h-0.5 after:max-w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300',
+                'ease-in after:block after:h-0.5 after:max-w-0 after:rounded-full after:bg-linear-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300',
                 { 'after:max-w-full': selected },
               ]"
             >
@@ -29,7 +29,10 @@
         </TabList>
         <TabPanels>
           <TabPanel
-            :class="['rounded-sm', 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500']"
+            :class="[
+              'rounded-xs',
+              'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500 focus-visible:outline-solid',
+            ]"
             :key="skillIdx"
             v-for="({ content, description }, skillIdx) in skills"
           >

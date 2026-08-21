@@ -1,10 +1,10 @@
 <template>
-  <Disclosure as="nav" class="fixed left-0 top-0 z-10 w-full bg-zinc-950/85 bg-bottom backdrop-blur-2xl backdrop-filter" v-slot="{ open }">
+  <Disclosure as="nav" class="fixed top-0 left-0 z-10 w-full bg-zinc-950/85 bg-bottom backdrop-blur-2xl backdrop-filter" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-28 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <DisclosureButton
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:text-white focus-visible:outline-none focus-visible:ring focus-visible:ring-inset focus-visible:ring-cyan-500"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:text-white focus-visible:ring-3 focus-visible:ring-cyan-500 focus-visible:outline-hidden focus-visible:ring-inset"
           >
             <span class="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" class="h-6 w-6" v-if="!open" />
@@ -23,7 +23,7 @@
                   //item.current ? 'bg-zinc-50/10 text-white' : 'text-zinc-300 hover:bg-zinc-50/25 hover:text-white',
                   'rounded-full px-3 py-2 text-base font-medium',
                   item.current ? 'text-white' : 'text-zinc-300 hover:text-white',
-                  'ease-in after:block after:h-0.5 after:max-w-0 after:rounded-full after:bg-gradient-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300',
+                  'ease-in after:block after:h-0.5 after:max-w-0 after:rounded-full after:bg-linear-to-r after:from-cyan-500 after:to-emerald-500 after:transition-all after:duration-300',
                   { 'after:max-w-full': item.current },
                 ]"
                 :href="item.href"
@@ -38,7 +38,7 @@
       </div>
     </div>
     <DisclosurePanel class="sm:hidden">
-      <div class="space-y-1 px-2 pb-3 pt-2">
+      <div class="space-y-1 px-2 pt-2 pb-3">
         <DisclosureButton
           :aria-current="item.current ? 'page' : undefined"
           :class="[

@@ -2,18 +2,18 @@
   <div class="relative isolate py-12">
     <section class="mx-auto grid max-w-7xl scroll-m-28 grid-cols-1 items-start gap-y-8 px-4 sm:scroll-m-16 sm:px-12 md:grid-cols-2" id="contact">
       <div class="md:py-20">
-        <div class="prose prose-zinc prose-invert mx-auto lg:mx-0 lg:max-w-lg">
+        <div class="mx-auto prose prose-zinc prose-invert lg:mx-0 lg:max-w-lg">
           <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden">
             <div
               :class="[
                 'absolute h-full w-full blur-3xl',
-                '[mask-image:radial-gradient(white_50%,transparent_95%)]',
-                'left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-24',
+                'mask-[radial-gradient(white_50%,transparent_95%)]',
+                'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-24',
               ]"
               aria-hidden="true"
             >
               <div
-                class="aspect-[1200/678] w-[75rem] bg-gradient-to-br from-cyan-500/50 via-emerald-700/50 via-25% to-zinc-800/50 to-80% opacity-50"
+                class="aspect-1200/678 w-300 bg-linear-to-br from-cyan-500/50 via-emerald-700/50 via-25% to-zinc-800/50 to-80% opacity-50"
                 style="
                   clip-path: polygon(
                     66.74% 68.073%,

@@ -1,7 +1,7 @@
 <template>
   <section :class="['mx-auto grid max-w-7xl px-8 py-8 sm:px-12']">
     <div :class="['relative mx-auto grid grid-cols-1 gap-y-6 lg:grid-cols-[auto_1fr] lg:grid-rows-[auto_1fr] lg:gap-x-12 lg:gap-y-8']">
-      <div :class="['flex  max-lg:w-full lg:flex-col', ' prose prose-zinc prose-invert']">
+      <div :class="['flex max-lg:w-full lg:flex-col', 'prose prose-zinc prose-invert']">
         <div class="max-w-xs max-lg:-order-1 max-lg:flex-auto sm:col-span-4">
           <img alt="Jason Sims" class="not-prose relative h-full w-full rounded-lg" src="@/assets/images/resume.webp" />
         </div>
@@ -12,7 +12,12 @@
       <div>
         <ul class="not-prose flex flex-col gap-4" role="list">
           <li :key="social.name" class="flex" v-for="social in socialMedia">
-            <a :href="social.url" class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white" rel="noopener noreferrer" target="_blank">
+            <a
+              :href="social.url"
+              class="group flex items-center text-sm font-medium text-zinc-300 transition hover:text-white"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <component
                 :alt="social.name"
                 :is="social.logo"

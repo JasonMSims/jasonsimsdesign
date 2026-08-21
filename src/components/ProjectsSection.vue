@@ -3,7 +3,7 @@
     :class="['mx-auto max-w-7xl scroll-m-20 px-4 py-8 sm:scroll-m-12 sm:py-16 xl:px-8', 'prose prose-sm prose-zinc prose-invert']"
     id="projects"
   >
-    <h2 class="mb-8 mt-4 text-center text-4xl font-bold">Some of My Projects</h2>
+    <h2 class="mt-4 mb-8 text-center text-4xl font-bold">Some of My Projects</h2>
 
     <TabGroup @change="handleFilterChange">
       <TabList class="not-prose flex flex-row items-center justify-center gap-2 px-6 py-6">
@@ -15,7 +15,7 @@
       </TabList>
       <TabPanels>
         <TabPanel
-          :class="['rounded-xl', 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500']"
+          :class="['rounded-xl', 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-500 focus-visible:outline-solid']"
           :id="category"
           :key="categoryIdx"
           as="template"

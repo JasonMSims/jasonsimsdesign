@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -5,7 +6,7 @@ import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
 
-import { markdownItSetup } from './config/markdown-it'
+import { markdownItSetup } from './config/markdown-it.ts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,6 +14,7 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
+    tailwindcss(),
     svgLoader(),
     Components({ dts: '@/types/components.d.ts', include: [/\.vue$/, /\.vue\$vue/, /\.md$/] }),
     Markdown({
