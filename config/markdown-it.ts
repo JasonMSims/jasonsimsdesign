@@ -9,5 +9,8 @@ export const markdownItSetup = (md: MarkdownExit) => {
       rel: 'noopener',
       target: '_blank',
     },
+    // Without a matcher every link is rewritten, which sends in-app links like
+    // /resume to a new tab and bypasses the router.
+    matcher: (href: string) => /^https?:/.test(href),
   }).use(Attributes, {})
 }
