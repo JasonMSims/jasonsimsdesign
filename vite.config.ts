@@ -16,7 +16,7 @@ export default defineConfig({
     }),
     tailwindcss(),
     svgLoader(),
-    Components({ dts: '@/types/components.d.ts', include: [/\.vue$/, /\.vue\$vue/, /\.md$/] }),
+    Components({ dts: 'src/types/components.d.ts', include: [/\.vue$/, /\.vue\$vue/, /\.md$/] }),
     Markdown({
       markdownItSetup,
     }),
