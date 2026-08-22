@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "composite": true,
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "outDir": "node_modules/.tmp/tsconfig-node",
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true
   },
-  "include": ["vite.config.ts", "config/markdown-it.ts"]
+  "include": ["vite.config.ts", "config/markdown-it.ts", "src/types/markdown-it-link-attributes.d.ts"]
 }
