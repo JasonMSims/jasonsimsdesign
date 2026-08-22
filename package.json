@@ -6,7 +6,8 @@
   "packageManager": "pnpm@11.13.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc && vite build",
+    "build": "pnpm run typecheck && vite build",
+    "typecheck": "vue-tsc && tsc -p tsconfig.node.json",
     "preview": "vite preview",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
