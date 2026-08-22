@@ -14,7 +14,7 @@ defineProps({
 })
 </script>
 
-<style scope>
+<style scoped>
 @reference '../style.css';
 
 .is-typed {
