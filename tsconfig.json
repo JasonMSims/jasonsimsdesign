@@ -19,10 +19,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["node_modules/@/*"]
+      "@/*": ["./src/*"],
+      "~/*": ["./node_modules/@/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "**/*.d.ts", "src/**/*.d.ts", "src/**/*.vue"],
