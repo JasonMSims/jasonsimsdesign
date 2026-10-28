@@ -1,3 +1,8 @@
-# Portfolio Website
+# jasonsims.dev
 
-[jasonsims.design](https://jasonsims.design)
+Jason Sims' personal site.
+
+```sh
+npx wrangler dev
+npx wrangler deploy
+```

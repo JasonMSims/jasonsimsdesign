@@ -1,0 +1,118 @@
+/* Geist — SIL Open Font License 1.1, see fonts/OFL.txt */
+@font-face{font-family:Geist;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/Geist-Regular.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/Geist-Medium.woff2) format("woff2")}
+@font-face{font-family:Geist;font-style:normal;font-weight:600;font-display:swap;src:url(fonts/Geist-SemiBold.woff2) format("woff2")}
+
+:root{
+  color-scheme:light dark;
+
+  --space-1:.25rem;
+  --space-2:.5rem;
+  --space-3:.75rem;
+  --space-4:1rem;
+  --space-6:1.5rem;
+  --space-8:2rem;
+  --space-12:3rem;
+  --space-16:4rem;
+  --space-24:6rem;
+
+  --text-xs:.75rem;     --leading-xs:var(--space-4);
+  --text-sm:.875rem;    --leading-sm:1.25rem;
+  --text-base:.9375rem; --leading-base:var(--space-6);
+  --text-lg:1.25rem;    --leading-lg:1.75rem;
+  --tracking-tight:-.02em;
+  --tracking-wide:.05em;
+  --weight-regular:400;--weight-medium:500;--weight-semibold:600;
+  --font:Geist,ui-sans-serif,system-ui,sans-serif;
+
+  --measure:32rem;
+  --gutter:var(--space-6);
+  --page-top:var(--space-16);
+  --section-gap:var(--space-12);
+  --logo:var(--space-6);
+  --icon:var(--space-4);
+  --popover-w:18rem;
+  --radius-sm:.125rem;--radius:.375rem;
+  --ring:2px;--hairline:1px;
+  --shadow-sm:0 1px 2px 0 rgb(0 0 0/.05);
+  --fade:.12s ease;
+  --ease:150ms cubic-bezier(.4,0,.2,1);
+
+  --bg:#fff;
+  --fg:#09090b;
+  --text:#3f3f46;
+  --body:#52525b;
+  --muted:#71717a;
+  --faint:#71717a;
+  --rule:#d4d4d8;
+  --border:#e4e4e7;
+  --accent:#0d9488;
+}
+@media (min-width:640px){
+  :root{--page-top:var(--space-24);--section-gap:var(--space-16)}
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#09090b;--fg:#fafafa;--text:#d4d4d8;--body:#d4d4d8;
+    --muted:#a1a1aa;--faint:#a1a1aa;--rule:#3f3f46;--border:#27272a;--accent:#12b981;
+  }
+}
+
+*,::before,::after{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--fg);
+  font-family:var(--font);font-size:var(--text-base);line-height:var(--leading-base);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+h1,h2,h3{font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+svg{display:block;width:var(--size);height:var(--size)}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a,button{transition:color var(--ease),text-decoration-color var(--ease)}
+:focus-visible{outline:var(--ring) solid var(--faint);outline-offset:var(--ring);border-radius:var(--radius-sm)}
+
+.page{max-width:calc(var(--measure) + 2 * var(--gutter));margin:0 auto;padding:var(--page-top) var(--gutter)}
+
+.logo{display:inline-flex;margin-bottom:var(--space-4);--size:var(--logo)}
+.name{font-size:var(--text-lg);line-height:var(--leading-lg);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-tight)}
+.name span{color:var(--accent)}
+.role{margin-top:var(--space-1);color:var(--muted)}
+.intro{margin-top:var(--space-4);color:var(--text)}
+.intro a{font-weight:var(--weight-medium);color:var(--fg);text-decoration:underline var(--rule);text-underline-offset:var(--space-1)}
+.intro a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+
+.building{margin-top:var(--section-gap)}
+.label{font-size:var(--text-xs);line-height:var(--leading-xs);font-weight:var(--weight-medium);text-transform:uppercase;letter-spacing:var(--tracking-wide);color:var(--muted)}
+.projects{margin-top:var(--space-4)}
+.project+.project{margin-top:var(--space-8)}
+.project-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-1) var(--space-4)}
+.project h3{font-size:var(--text-base);line-height:var(--leading-base);font-weight:var(--weight-semibold);color:var(--fg)}
+.project-head span{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint)}
+.project-desc{margin-top:var(--space-1);color:var(--body)}
+.project-tag{margin-top:var(--space-1);font-size:var(--text-sm);line-height:var(--leading-sm);color:var(--faint)}
+
+.site-footer{position:relative;margin-top:var(--section-gap);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4) var(--space-6)}
+.site-footer nav{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);font-size:var(--text-sm);line-height:var(--leading-sm);color:var(--muted)}
+.icon{display:inline-flex;--size:var(--icon)}
+.email{color:var(--body)}
+.site-footer nav a:hover,.verse-btn:hover{color:var(--accent)}
+
+.verse{display:inline-block}
+.verse-btn{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint);border-radius:var(--radius-sm)}
+.verse-pop{
+  position:absolute;bottom:100%;right:0;margin-bottom:var(--space-2);
+  width:max-content;max-width:min(var(--popover-w),100%);padding:var(--space-3) var(--space-4);
+  font-size:var(--text-sm);line-height:var(--leading-base);color:var(--text);
+  background:var(--bg);border:var(--hairline) solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  opacity:0;visibility:hidden;transform:translateY(var(--ring));
+  transition:opacity var(--fade),transform var(--fade),visibility 0s linear .12s;
+}
+.verse:hover .verse-pop,.verse.open .verse-pop{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.verse-pop a{display:block;margin-top:var(--space-1);font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint)}
+.verse-pop a:hover{color:var(--fg)}
+
+@media (prefers-reduced-motion:reduce){
+  *,::before,::after{transition:none!important}
+}
