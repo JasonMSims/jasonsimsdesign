@@ -43,7 +43,6 @@
   --text:#3f3f46;
   --body:#52525b;
   --muted:#71717a;
-  --faint:#71717a;
   --rule:#d4d4d8;
   --border:#e4e4e7;
   --accent:#0d9488;
@@ -54,7 +53,7 @@
 @media (prefers-color-scheme:dark){
   :root{
     --bg:#09090b;--fg:#fafafa;--text:#d4d4d8;--body:#d4d4d8;
-    --muted:#a1a1aa;--faint:#a1a1aa;--rule:#3f3f46;--border:#27272a;--accent:#12b981;
+    --muted:#a1a1aa;--rule:#3f3f46;--border:#27272a;--accent:#12b981;
   }
 }
 
@@ -70,11 +69,12 @@ a{color:inherit;text-decoration:inherit}
 svg{display:block;width:var(--size);height:var(--size)}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 a,button{transition:color var(--ease),text-decoration-color var(--ease)}
-:focus-visible{outline:var(--ring) solid var(--faint);outline-offset:var(--ring);border-radius:var(--radius-sm)}
+:focus-visible{outline:var(--ring) solid var(--muted);outline-offset:var(--ring);border-radius:var(--radius-sm)}
 
 .page{max-width:calc(var(--measure) + 2 * var(--gutter));margin:0 auto;padding:var(--page-top) var(--gutter)}
 
-.logo{display:inline-flex;margin-bottom:var(--space-4);--size:var(--logo)}
+.logo{display:inline-flex;margin-bottom:var(--space-4)}
+.logo img{display:block;width:var(--logo);height:var(--logo)}
 .name{font-size:var(--text-lg);line-height:var(--leading-lg);font-weight:var(--weight-semibold);letter-spacing:var(--tracking-tight)}
 .name span{color:var(--accent)}
 .role{margin-top:var(--space-1);color:var(--muted)}
@@ -88,9 +88,9 @@ a,button{transition:color var(--ease),text-decoration-color var(--ease)}
 .project+.project{margin-top:var(--space-8)}
 .project-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-1) var(--space-4)}
 .project h3{font-size:var(--text-base);line-height:var(--leading-base);font-weight:var(--weight-semibold);color:var(--fg)}
-.project-head span{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint)}
+.project-head span{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--muted)}
 .project-desc{margin-top:var(--space-1);color:var(--body)}
-.project-tag{margin-top:var(--space-1);font-size:var(--text-sm);line-height:var(--leading-sm);color:var(--faint)}
+.project-tag{margin-top:var(--space-1);font-size:var(--text-sm);line-height:var(--leading-sm);color:var(--muted)}
 
 .site-footer{position:relative;margin-top:var(--section-gap);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4) var(--space-6)}
 .site-footer nav{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2) var(--space-4);font-size:var(--text-sm);line-height:var(--leading-sm);color:var(--muted)}
@@ -99,7 +99,7 @@ a,button{transition:color var(--ease),text-decoration-color var(--ease)}
 .site-footer nav a:hover,.verse-btn:hover{color:var(--accent)}
 
 .verse{display:inline-block}
-.verse-btn{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint);border-radius:var(--radius-sm)}
+.verse-btn{font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--muted);border-radius:var(--radius-sm)}
 .verse-pop{
   position:absolute;bottom:100%;right:0;margin-bottom:var(--space-2);
   width:max-content;max-width:min(var(--popover-w),100%);padding:var(--space-3) var(--space-4);
@@ -109,8 +109,9 @@ a,button{transition:color var(--ease),text-decoration-color var(--ease)}
   opacity:0;visibility:hidden;transform:translateY(var(--ring));
   transition:opacity var(--fade),transform var(--fade),visibility 0s linear .12s;
 }
+.verse-pop::before{content:"";position:absolute;inset:100% 0 auto;height:calc(var(--space-2) + var(--hairline))}
 .verse:hover .verse-pop,.verse.open .verse-pop{opacity:1;visibility:visible;transform:none;transition-delay:0s}
-.verse-pop a{display:block;margin-top:var(--space-1);font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--faint)}
+.verse-pop a{display:block;margin-top:var(--space-1);font-size:var(--text-xs);line-height:var(--leading-xs);color:var(--muted)}
 .verse-pop a:hover{color:var(--fg)}
 
 @media (prefers-reduced-motion:reduce){
