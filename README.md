@@ -6,3 +6,4 @@ Jason Sims' personal site.
 npx wrangler dev
 npx wrangler deploy
 ```
+Deploys automatically to Cloudflare on push to main.
